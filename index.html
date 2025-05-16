@@ -18,6 +18,7 @@
       background: #f6f2ef;
       padding: 60px 20px;
       text-align: center;
+      position: relative;
     }
 
     header h2 {
@@ -31,6 +32,19 @@
       font-size: 1.1em;
       color: #6a5b55;
       margin: 0;
+    }
+
+    .language-flag {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .language-flag img {
+      width: 28px;
+      height: 20px;
+      border-radius: 3px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     }
 
     section {
@@ -66,6 +80,20 @@
       height: auto;
       border-radius: 12px;
       margin: 20px 0;
+    }
+
+    .profile-photo {
+      width: 160px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .about-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
     }
 
     .button {
@@ -130,6 +158,9 @@
 <body>
 
   <header>
+    <a href="index-ru.html" class="language-flag" title="Читать на русском">
+      <img src="https://flagcdn.com/w40/ru.png" alt="Russian Flag">
+    </a>
     <h2>Private Transition & Fulfillment Coaching</h2>
     <p>For expats, spouses and partners navigating global lives</p>
   </header>
@@ -139,7 +170,7 @@
   </section>
 
   <section>
-    <h2>"I received a job offer but we need to move" — Starting a new life again...</h2>
+    <h2>"I received a job offer but I need to move" — Starting a new life again...</h2>
     <p>Moving abroad can be exciting, but it also comes with unique personal and emotional challenges. Common challenges faced by expats:</p>
     <ul>
       <li><strong>Loss of identity:</strong> Questioning one’s sense of purpose or professional direction, especially when personal or career goals are disrupted by relocation</li>
@@ -157,11 +188,16 @@
 
   <section>
     <h2>About Me</h2>
-    <p>I'm Galina, a personal transformation specialist dedicated to helping expats rediscover their purpose, cultivate meaningful connection, and build lasting confidence abroad. Whether you’re navigating a new culture or seeking a deeper sense of fulfilment, I offer guidance rooted in lived experience — not theory.</p>
-    <p>Over the years, I’ve reinvented my life across London, Milan, Lugano, and Madrid — and yes, back to London more than once — through many chapters of who I’ve been: a single woman and a partner, a professional, a housewife, an entrepreneur, a wife, and a mother. I hold a Master’s degree in Finance and Accounting, and my career has spanned the finance and maritime industries, among others. I’ve managed complex projects, built a home, and speak four languages, including English, Russian, and Italian.</p>
-    <p>I’m also someone who seeks challenge and adventure — I skydive, I scuba dive, and I never stop learning. What’s remained constant is my drive to evolve, to stay curious, and to meet life abroad not just with endurance — but with intention.</p>
-    <p>I know how disorienting and emotionally complex it can be to start over in a new country. I’ve lived it, and now I help others move through it with clarity, purpose, and confidence.</p>
-    <p>You don’t have to navigate it alone. This journey can become your most powerful transformation.</p>
+    <div class="about-wrapper">
+      <img src="/mnt/data/me-photo.jpg" alt="Galina - Expat Coach" class="profile-photo">
+      <div>
+        <p>I'm Galina, a personal transformation specialist dedicated to helping expats rediscover their purpose, cultivate meaningful connection, and build lasting confidence abroad. Whether you’re navigating a new culture or seeking a deeper sense of fulfilment, I offer guidance rooted in lived experience — not theory.</p>
+        <p>Over the years, I’ve reinvented my life across London, Milan, Lugano, and Madrid — and yes, back to London more than once — through many chapters of who I’ve been: a single woman and a partner, a professional, a housewife, an entrepreneur, a wife, and a mother. I hold a Master’s degree in Finance and Accounting, and my career has spanned the finance and maritime industries, among others. I’ve managed complex projects, built a home, and speak four languages, including English, Russian, and Italian.</p>
+        <p>I’m also someone who seeks challenge and adventure — I skydive, I scuba dive, and I never stop learning. What’s remained constant is my drive to evolve, to stay curious, and to meet life abroad not just with endurance — but with intention.</p>
+        <p>I know how disorienting and emotionally complex it can be to start over in a new country. I’ve lived it, and now I help others move through it with clarity, purpose, and confidence.</p>
+        <p>You don’t have to navigate it alone. This journey can become your most powerful transformation.</p>
+      </div>
+    </div>
   </section>
 
   <section class="card-section">
@@ -181,13 +217,12 @@
       <li>Tools and strategies to manage change and uncertainty</li>
       <li>Encouragement and accountability as you redefine fulfilment</li>
       <li>A partnership built on trust, insight, and lived experience</li>
-      <li>An introductory discovery session designed to understand your goals and explore if we’re the right fit</li>
     </ul>
 
-    <p>We begin with a Discovery Session — a relaxed, one-on-one conversation to understand your goals and see if we're the right fit to work together.</p>
+    <h4>We begin with a Discovery Session — a relaxed, one-on-one conversation to understand your goals and see if we're the right fit to work together.<h4>
 
-    <a href="mailto:yourname@example.com" class="button">Start Your Transformation Now</a>
-    <p class="note">Limited availability – USD 25 reservation fee applies.</p>
+    <a href="mailto:yourname@example.com" class="button">Start Your Transformation</a>
+    <p class="note">*USD 25 reservation fee applies.</p>
   </section>
 
   <footer>
@@ -196,3 +231,6 @@
 
 </body>
 </html>
+
+
+

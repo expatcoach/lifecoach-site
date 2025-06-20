@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galina Antonini | Thrive Abroad Coaching</title>
+  <title>Galina Antonini</title>
+
   <style>
     * {
       margin: 0;
@@ -19,7 +20,11 @@
     .hero {
       height: 100vh;
  
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('coach-photo.jpg') center center / cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('coach-photo.jpg') center top / contain no-repeat;
+background-size: 110%;
+background-repeat: no-repeat;
+background-position: center top;
+
      
       filter: none;
       position: relative;
@@ -37,12 +42,14 @@
       z-index: 1000;
     }
 
-    .nav .logo {
-      font-size: 1.4em;
-      font-weight: bold;
-      color: #333;
-      text-transform: uppercase;
-    }
+ .nav .logo {
+  font-size: 1.4em;
+  font-weight: 400; /* Lighter than bold */
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.2px; /* Adds subtle spacing for elegance */
+}
+
 
     .nav .menu {
       display: flex;
@@ -72,17 +79,18 @@
       width: 100%;
     }
 
-    .centered-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 20px 30px;
-      border-radius: 12px;
-    }
+ .centered-text {
+  position: absolute;
+  top: 25%; /* move higher — adjust as needed */
+  left: 50%;
+  transform: translate(-50%, -35%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  border-radius: 12px;
+}
+
 
     .centered-text h1 {
       font-size: 2.5em;

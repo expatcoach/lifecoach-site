@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOCATION | Galina Antonini</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f6f2ef;
+      color: #333;
+    }
+
+    .nav {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav .logo {
+      font-size: 1.4em;
+      font-weight: 400;
+      letter-spacing: 1.2px;
+      color: #333;
+      text-transform: uppercase;
+    }
+
+    .nav .menu {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav .menu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1em;
+      position: relative;
+    }
+
+    .nav .menu a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #333;
+      transition: 0.3s ease;
+    }
+
+    .nav .menu a:hover::after {
+      width: 100%;
+    }
+
+    .page-header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    .page-header h1 {
+      font-weight: 400;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    .divider {
+      width: 80px;
+      height: 2px;
+      background-color: white;
+      margin: 0 auto 30px;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px 20px;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="logo">Galina Antonini</div>
+    <div class="menu">
+      <a href="index.html">HOME</a>
+      <a href="you.html">YOU</a>
+      <a href="me.html">ME</a>
+      <a href="we.html">WE</a>
+      <a href="fees.html">FEES</a>
+      <a href="location.html">LOCATION</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <h1>LOCATION</h1>
+    <div class="divider"></div>
+  </div>
+
+  <div class="content">
+    <p>I work with clients internationally through secure Zoom video calls. Whether you're in London, New York, Singapore, or somewhere in between — I offer coaching that's flexible across time zones.</p>
+
+    <p>If you're based in or visiting London, in-person sessions can be arranged in Central or West London upon request. Please contact me to explore what's possible.</p>
+
+    <p>Life coaching with a global mindset, from wherever you are in the world.</p>
+  </div>
+
+</body>
+</html>

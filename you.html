@@ -1,19 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YOU | Galina Antonini Coaching</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>Life Coaching for Expats in Transition | YOU | Gala Antonini Coaching</title>
+
+  <!-- Canonical & Robots -->
+  <link rel="canonical" href="https://yourdomain.com/you.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- SEO Core -->
+  <meta name="description" content="This page is about YOU. Expat life coaching with Gala Antonini to help you navigate transitions, build confidence, and create belonging abroad." />
+  <meta name="keywords" content="expat life coaching, coaching for expats, transition coaching, emotional resilience abroad, expat support London, cross-cultural coaching" />
+  <meta name="author" content="Gala Antonini" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Life Coaching for Expats in Transition | YOU | Gala Antonini Coaching" />
+  <meta property="og:description" content="A safe space for expats, global nomads, and internationally minded individuals to find clarity, purpose, and connection." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/you.html" />
+  <meta property="og:image" content="https://yourdomain.com/images/you-preview.jpg" />
+  <meta property="og:image:alt" content="Life coaching for expats and global nomads navigating transitions" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Life Coaching for Expats in Transition | YOU | Gala Antonini Coaching" />
+  <meta name="twitter:description" content="Expat coaching to help you feel confident, connected, and at home abroad." />
+  <meta name="twitter:image" content="https://yourdomain.com/images/you-preview.jpg" />
+
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #f6f2ef; /* matches homepage tone */
+      background-color: #f6f2ef;
       color: #333;
+      line-height: 1.6;
     }
 
-    .nav {
+    /* ✅ Accessibility: skip link (hidden until focused) */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 20px;
+      top: 20px;
+      width: auto;
+      height: auto;
+      padding: 10px 14px;
+      background: #000;
+      color: #fff;
+      z-index: 1000;
+      border-radius: 4px;
+    }
+
+    nav {
       background: rgba(255, 255, 255, 0.9);
       padding: 20px 40px;
       display: flex;
@@ -21,28 +69,28 @@
       align-items: center;
     }
 
-  .nav .logo {
-  font-size: 1.4em;
-  font-weight: 400; /* Lighter than bold */
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 1.2px; /* Adds subtle spacing for elegance */
-}
+    .logo {
+      font-size: 1.4em;
+      font-weight: 400;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
 
-
-    .nav .menu {
+    .menu {
       display: flex;
       gap: 25px;
     }
 
-    .nav .menu a {
+    .menu a {
       text-decoration: none;
       color: #333;
       font-size: 1em;
       position: relative;
+      font-weight: 500;
     }
 
-    .nav .menu a::after {
+    .menu a::after {
       content: '';
       position: absolute;
       width: 0%;
@@ -53,17 +101,18 @@
       transition: 0.3s ease;
     }
 
-    .nav .menu a:hover::after {
+    .menu a:hover::after,
+    .menu a:focus::after {
       width: 100%;
     }
 
-    .page-header {
+    header {
       text-align: center;
       padding: 60px 20px 20px;
     }
 
-    .page-header h1 {
-      font-weight: 400; /* not bold */
+    header h1 {
+      font-weight: 400;
       font-size: 2.2em;
       margin-bottom: 10px;
     }
@@ -75,21 +124,19 @@
       margin: 0 auto 30px;
     }
 
-    .content {
+    main {
       max-width: 800px;
       margin: auto;
       padding: 30px 20px;
       font-size: 1.1em;
-      line-height: 1.6;
-      background-color: #f6f2ef;
     }
 
     @media (max-width: 768px) {
-      .nav {
+      nav {
         flex-direction: column;
         align-items: flex-start;
       }
-      .nav .menu {
+      .menu {
         flex-direction: column;
         gap: 10px;
         margin-top: 10px;
@@ -98,32 +145,43 @@
   </style>
 </head>
 <body>
+  <!-- ✅ This is now hidden unless focused with TAB -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="nav">
-    <div class="logo">Galina Antonini</div>
+  <nav aria-label="Main navigation">
+    <div class="logo">Gala Antonini</div>
     <div class="menu">
       <a href="index.html">HOME</a>
-      <a href="you.html">YOU</a>
+      <a href="you.html" aria-current="page">YOU</a>
       <a href="me.html">ME</a>
       <a href="we.html">WE</a>
       <a href="fees.html">FEES</a>
       <a href="location.html">LOCATION</a>
       <a href="contact.html">CONTACT</a>
     </div>
-  </div>
+  </nav>
 
-  <div class="page-header">
+  <header>
     <h1>YOU</h1>
     <div class="divider"></div>
-  </div>
+  </header>
 
-  <div class="content">
-    <p>You're navigating a major life transition. Maybe it’s a new city, a new relationship, or a version of yourself you no longer recognize. You may feel a sense of disconnection, uncertainty, or quiet unease—even when everything “should” feel fine.</p>
+  <main id="main">
+    <p>
+      You’re navigating a major life transition. Maybe it’s a new city, a new relationship, or even a version of yourself you no longer recognize. You may feel a sense of disconnection, uncertainty, or quiet unease—even when everything “should” feel fine.
+    </p>
 
-    <p>This space is about you: your emotional world, your values, your stuck points, your voice, your vision. Our work together begins here—with where you are and where you want to be.</p>
+    <p>
+      This space is about you: your emotional world, your values, your stuck points, your voice, your vision. Our work together begins here—with where you are and where you want to be.
+    </p>
 
-    <p>You don’t need to have it all figured out. You just need a safe place to begin.</p>
-  </div>
+    <p>
+      You don’t need to have it all figured out. You just need a safe place to begin.
+    </p>
+  </main>
 
+  <noscript>
+    Some features may not work correctly because JavaScript is disabled.
+  </noscript>
 </body>
 </html>

@@ -1,19 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LOCATION | Galina Antonini</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>Global & London-Based | LOCATION | Gala Antonini Coaching</title>
+
+  <!-- Canonical & Robots -->
+  <link rel="canonical" href="https://yourdomain.com/location.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- SEO Core -->
+  <meta name="description" content="Work with Gala Antonini from anywhere via secure online sessions. In-person coaching available in Central and South West London by request." />
+  <meta name="keywords" content="expat coaching worldwide, online life coach for expats, London life coach, cross-cultural coaching, time zone friendly coaching" />
+  <meta name="author" content="Gala Antonini" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Global & London-Based | LOCATION | Gala Antonini Coaching" />
+  <meta property="og:description" content="Online coaching worldwide. In-person sessions available in Central & South West London." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/location.html" />
+  <meta property="og:image" content="https://yourdomain.com/images/location-preview.jpg" />
+  <meta property="og:image:alt" content="Map pin showing London with global connections for online coaching" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Global & London-Based | LOCATION | Gala Antonini Coaching" />
+  <meta name="twitter:description" content="Secure video coaching worldwide, plus in-person sessions in London." />
+  <meta name="twitter:image" content="https://yourdomain.com/images/location-preview.jpg" />
+
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
       background-color: #f6f2ef;
       color: #333;
+      line-height: 1.6;
     }
 
-    .nav {
+    /* Accessibility: skip link (hidden until focused) */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 20px;
+      top: 20px;
+      width: auto;
+      height: auto;
+      padding: 10px 14px;
+      background: #000;
+      color: #fff;
+      z-index: 1000;
+      border-radius: 4px;
+    }
+
+    nav {
       background: rgba(255, 255, 255, 0.9);
       padding: 20px 40px;
       display: flex;
@@ -21,7 +69,7 @@
       align-items: center;
     }
 
-    .nav .logo {
+    .logo {
       font-size: 1.4em;
       font-weight: 400;
       letter-spacing: 1.2px;
@@ -29,19 +77,20 @@
       text-transform: uppercase;
     }
 
-    .nav .menu {
+    .menu {
       display: flex;
       gap: 25px;
     }
 
-    .nav .menu a {
+    .menu a {
       text-decoration: none;
       color: #333;
       font-size: 1em;
       position: relative;
+      font-weight: 500;
     }
 
-    .nav .menu a::after {
+    .menu a::after {
       content: '';
       position: absolute;
       width: 0%;
@@ -52,16 +101,17 @@
       transition: 0.3s ease;
     }
 
-    .nav .menu a:hover::after {
+    .menu a:hover::after,
+    .menu a:focus::after {
       width: 100%;
     }
 
-    .page-header {
+    header {
       text-align: center;
       padding: 60px 20px 20px;
     }
 
-    .page-header h1 {
+    header h1 {
       font-weight: 400;
       font-size: 2.2em;
       margin-bottom: 10px;
@@ -74,42 +124,132 @@
       margin: 0 auto 30px;
     }
 
-    .content {
+    main {
       max-width: 800px;
       margin: auto;
-      padding: 30px 20px;
+      padding: 30px 20px 60px;
       font-size: 1.1em;
-      line-height: 1.6;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+      margin-bottom: 16px;
+    }
+
+    .muted { opacity: 0.95; }
+    .list { padding-left: 20px; }
+    .list li { margin: 6px 0; }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="nav">
-    <div class="logo">Galina Antonini</div>
+  <nav aria-label="Main navigation">
+    <div class="logo">Gala Antonini</div>
     <div class="menu">
       <a href="index.html">HOME</a>
       <a href="you.html">YOU</a>
       <a href="me.html">ME</a>
       <a href="we.html">WE</a>
       <a href="fees.html">FEES</a>
-      <a href="location.html">LOCATION</a>
+      <a href="location.html" aria-current="page">LOCATION</a>
       <a href="contact.html">CONTACT</a>
     </div>
-  </div>
+  </nav>
 
-  <div class="page-header">
+  <header>
     <h1>LOCATION</h1>
     <div class="divider"></div>
-  </div>
+  </header>
 
-  <div class="content">
-    <p>I work with clients internationally through secure Zoom video calls. Whether you're in London, New York, Singapore, or somewhere in between — I offer coaching that's flexible across time zones.</p>
+  <main id="main">
+    <section class="card">
+      <p>
+        I work with clients internationally through secure video calls. Whether you’re in London, New York, Dubai, Singapore, or somewhere in between — sessions are scheduled flexibly across time zones.
+      </p>
+    </section>
 
-    <p>If you're based in or visiting London, in-person sessions can be arranged in Central or West London upon request. Please contact me to explore what's possible.</p>
+    <section class="card">
+      <p>
+        If you’re based in or visiting London, in-person sessions can be arranged in Central or South West London on request. Please <a href="contact.html">get in touch</a> to explore availability.
+      </p>
+    </section>
 
-    <p>Life coaching with a global mindset, from wherever you are in the world.</p>
-  </div>
+    <section class="card muted" aria-label="Practical details">
+      <ul class="list">
+        <li>Online sessions worldwide (Zoom/Google Meet)</li>
+        <li>In-person by arrangement — Central &amp; South West London</li>
+        <li>Time-zone friendly scheduling</li>
+        <li>Confidential, secure environment</li>
+      </ul>
+    </section>
 
+    <!-- Hidden descriptive image for accessibility/SEO (if you add a background image later) -->
+    <img src="images/location-map.jpg" alt="Global coaching offered online, with in-person sessions available in London" style="position:absolute; left:-9999px; width:1px; height:1px;" />
+  </main>
+
+  <!-- Structured Data: Service with Online & London presence -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Expat & Cross-Cultural Life Coaching",
+    "provider": {
+      "@type": "Person",
+      "name": "Gala Antonini",
+      "url": "https://yourdomain.com/"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "United Kingdom" },
+      { "@type": "Country", "name": "United States" },
+      { "@type": "Country", "name": "United Arab Emirates" },
+      { "@type": "Country", "name": "Singapore" },
+      { "@type": "Country", "name": "Italy" },
+      { "@type": "Country", "name": "Spain" },
+      { "@type": "Country", "name": "Switzerland" }
+    ],
+    "availableChannel": [
+      {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://yourdomain.com/contact.html",
+        "serviceLocation": { "@type": "VirtualLocation", "url": "https://yourdomain.com/" },
+        "name": "Online (Worldwide)"
+      },
+      {
+        "@type": "ServiceChannel",
+        "serviceLocation": {
+          "@type": "Place",
+          "name": "London (Central & South West)",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "London",
+            "addressCountry": "UK"
+          }
+        },
+        "name": "In-person (by appointment)"
+      }
+    ],
+    "url": "https://yourdomain.com/location.html",
+    "description": "Secure online coaching worldwide, with in-person sessions available in London."
+  }
+  </script>
+
+  <noscript>Some features may not work correctly because JavaScript is disabled.</noscript>
 </body>
 </html>
+

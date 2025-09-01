@@ -1,42 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ME | Galina Antonini</title>
+
+  <!-- SEO Meta Tags -->
+  <title>Life Coaching for Expats | Gala Antonini</title>
+  <meta name="description" content="Gala Antonini – Life Coach for expats, global nomads, and internationally minded professionals. Gain clarity, purpose, and confidence to thrive abroad.">
+  <meta name="keywords" content="life coaching for expats, global nomads, transformation coach, international life, clarity, purpose, confidence, London life coach">
+  <meta name="author" content="Gala Antonini">
+
+  <!-- Social Sharing (Open Graph) -->
+  <meta property="og:title" content="Life Coaching for Expats | Gala Antonini">
+  <meta property="og:description" content="Helping expats and global nomads thrive abroad with clarity, confidence, and purpose.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/me.html">
+  <meta property="og:image" content="https://yourwebsite.com/images/preview.jpg">
+
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
       background-color: #f6f2ef;
       color: #333;
+      line-height: 1.6;
     }
-    .nav {
+    nav {
       background: rgba(255, 255, 255, 0.9);
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .nav .logo {
+    nav .logo {
       font-size: 1.4em;
       font-weight: 400;
       letter-spacing: 1.2px;
       color: #333;
       text-transform: uppercase;
     }
-    .nav .menu {
+    nav .menu {
       display: flex;
       gap: 25px;
     }
-    .nav .menu a {
+    nav .menu a {
       text-decoration: none;
       color: #333;
       font-size: 1em;
       position: relative;
     }
-    .nav .menu a::after {
+    nav .menu a::after {
       content: '';
       position: absolute;
       width: 0%;
@@ -46,14 +59,14 @@
       background-color: #333;
       transition: 0.3s ease;
     }
-    .nav .menu a:hover::after {
+    nav .menu a:hover::after {
       width: 100%;
     }
-    .page-header {
+    header {
       text-align: center;
       padding: 60px 20px 20px;
     }
-    .page-header h1 {
+    header h1 {
       font-weight: 400;
       font-size: 2.2em;
       margin-bottom: 10px;
@@ -64,38 +77,55 @@
       background-color: white;
       margin: 0 auto 30px;
     }
-    .content {
+    main {
       max-width: 800px;
       margin: auto;
       padding: 30px 20px;
       font-size: 1.1em;
-      line-height: 1.6;
+    }
+    main p {
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
-  <div class="nav">
-    <div class="logo">Galina Antonini</div>
+  <nav aria-label="Main Navigation">
+    <div class="logo">Gala Antonini</div>
     <div class="menu">
       <a href="index.html">HOME</a>
       <a href="you.html">YOU</a>
-      <a href="me.html">ME</a>
+      <a href="me.html" aria-current="page">ME</a>
       <a href="we.html">WE</a>
       <a href="fees.html">FEES</a>
       <a href="location.html">LOCATION</a>
       <a href="contact.html">CONTACT</a>
     </div>
-  </div>
+  </nav>
 
-  <div class="page-header">
+  <header>
     <h1>ME</h1>
     <div class="divider"></div>
-  </div>
+  </header>
 
-  <div class="content">
-    <p>This is where I share my personal journey, values, and what drives me as a coach. I’ve lived across multiple cultures and reinvented myself many times — each chapter adding to how I support others through transformation.</p>
-  </div>
+  <main>
+    <p>
+      Hi, I’m Gala, currently living in London. I’ve lived across multiple cultures and reinvented myself many times—each chapter adding to how I support others through transformation. I hold a Master of Science in Finance and am a transformation mentor, life coach, occasional writer, entrepreneur, passionate artist, and networker who has experienced the globally mobile life myself.
+    </p>
+    <p>
+      I’m in an intercultural, bilingual marriage and raising a trilingual cross-cultural child. Over the years, I’ve lived in Russia, Latvia, the UK, Italy, Spain, and Switzerland, navigating countless moves, transitions, and cultural shifts along the way. I currently live in London but work with clients all around the world, embracing location independence.
+    </p>
+    <p>
+      I know firsthand how exciting yet challenging life abroad can be. From adapting to new languages and cultures to building a sense of home and belonging far from family, the journey is filled with both opportunities and obstacles. Along the way, I’ve learned three new languages and now speak English, Italian, Russian, and Latvian.
+    </p>
+    <p>
+      Through my coaching, I support expats, global nomads, and internationally minded individuals to gain clarity, purpose, and confidence in their international lives. Together, we work on creating your own definition of “home” and designing the life you want to thrive in—wherever in the world you are.
+    </p>
+    <p>
+      Would you like to explore how coaching could support your next chapter abroad? <a href="services.html">Learn more about my services</a> or <a href="contact.html">book a free discovery call</a>.
+    </p>
+  </main>
 
 </body>
 </html>
+

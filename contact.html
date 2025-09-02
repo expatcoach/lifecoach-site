@@ -1,19 +1,62 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CONTACT | Galina Antonini</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>Contact | Expat Life Coaching | Gala Antonini</title>
+
+  <!-- Canonical & Robots -->
+  <link rel="canonical" href="https://yourdomain.com/contact.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- SEO Core -->
+  <meta name="description" content="Contact Gala Antonini for expat and cross-cultural life coaching. Submit a secure inquiry—London & worldwide." />
+  <meta name="keywords" content="contact expat life coach, coaching inquiry, expat coaching London, global nomads coaching contact" />
+  <meta name="author" content="Gala Antonini" />
+
+  <!-- Social -->
+  <meta property="og:title" content="Contact | Expat Life Coaching | Gala Antonini" />
+  <meta property="og:description" content="Get in touch for a discovery call or coaching inquiry—London & worldwide." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/contact.html" />
+  <meta property="og:image" content="https://yourdomain.com/images/contact-preview.jpg" />
+  <meta property="og:image:alt" content="Contact form for expat life coaching with Gala Antonini" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
       background-color: #f6f2ef;
       color: #333;
+      line-height: 1.6;
     }
 
-    .nav {
+    /* Accessibility: skip link (hidden until focused) */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 20px;
+      top: 20px;
+      width: auto;
+      height: auto;
+      padding: 10px 14px;
+      background: #000;
+      color: #fff;
+      z-index: 1000;
+      border-radius: 4px;
+    }
+
+    nav {
       background: rgba(255, 255, 255, 0.9);
       padding: 20px 40px;
       display: flex;
@@ -21,7 +64,7 @@
       align-items: center;
     }
 
-    .nav .logo {
+    .logo {
       font-size: 1.4em;
       font-weight: 400;
       letter-spacing: 1.2px;
@@ -29,19 +72,20 @@
       text-transform: uppercase;
     }
 
-    .nav .menu {
+    .menu {
       display: flex;
       gap: 25px;
     }
 
-    .nav .menu a {
+    .menu a {
       text-decoration: none;
       color: #333;
       font-size: 1em;
       position: relative;
+      font-weight: 500;
     }
 
-    .nav .menu a::after {
+    .menu a::after {
       content: '';
       position: absolute;
       width: 0%;
@@ -51,22 +95,20 @@
       background-color: #333;
       transition: 0.3s ease;
     }
-
-    .nav .menu a:hover::after {
+    .menu a:hover::after,
+    .menu a:focus::after {
       width: 100%;
     }
 
-    .page-header {
+    header {
       text-align: center;
       padding: 60px 20px 20px;
     }
-
-    .page-header h1 {
+    header h1 {
       font-weight: 400;
       font-size: 2.2em;
       margin-bottom: 10px;
     }
-
     .divider {
       width: 80px;
       height: 2px;
@@ -74,24 +116,102 @@
       margin: 0 auto 30px;
     }
 
-    .content {
-      max-width: 800px;
+    main {
+      max-width: 840px;
       margin: auto;
-      padding: 30px 20px;
-      font-size: 1.1em;
-      line-height: 1.6;
+      padding: 30px 20px 60px;
+      font-size: 1.05em;
     }
 
-    a.email-link {
-      color: #333;
-      text-decoration: underline;
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    label {
+      display: block;
+      font-size: 0.95em;
+      margin-bottom: 6px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid rgba(0,0,0,0.15);
+      border-radius: 8px;
+      background: #fefefe;
+      font-family: inherit;
+      font-size: 1em;
+    }
+    textarea { min-height: 140px; resize: vertical; }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 640px) {
+      .row { grid-template-columns: 1fr; }
+    }
+
+    .consent {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.95em;
+    }
+    .consent input { margin-top: 3px; }
+
+    .btn {
+      appearance: none;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 18px;
+      background: #333;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .muted { opacity: 0.95; }
+    .success,
+    .error {
+      display: none;
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 8px;
+    }
+    .success { background: #e7f7ee; color: #0a6b3a; }
+    .error { background: #fdecec; color: #8a1c1c; }
+
+    /* Honeypot (hidden from users) */
+    .hp {
+      position: absolute !important;
+      left: -50000px !important;
+      top: auto !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+    }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; align-items: flex-start; }
+      .menu { flex-direction: column; gap: 10px; margin-top: 10px; }
     }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="nav">
-    <div class="logo">Galina Antonini</div>
+  <nav aria-label="Main navigation">
+    <div class="logo">Gala Antonini</div>
     <div class="menu">
       <a href="index.html">HOME</a>
       <a href="you.html">YOU</a>
@@ -99,24 +219,142 @@
       <a href="we.html">WE</a>
       <a href="fees.html">FEES</a>
       <a href="location.html">LOCATION</a>
-      <a href="contact.html">CONTACT</a>
+      <a href="contact.html" aria-current="page">CONTACT</a>
     </div>
-  </div>
+  </nav>
 
-  <div class="page-header">
+  <header>
     <h1>CONTACT</h1>
     <div class="divider"></div>
-  </div>
+  </header>
 
-  <div class="content">
-    <p>I’d love to hear from you. Whether you’re curious about how coaching works, want to schedule a discovery session, or just want to connect — feel free to reach out.</p>
+  <main id="main">
+    <div class="card" role="region" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" style="font-weight:400;margin-top:0;">Get in touch</h2>
+      <p class="muted">
+        Use the form below to enquire about a discovery call, packages, or availability. I reply personally on weekdays.
+      </p>
 
-    <p>You can email me directly at <a href="mailto:galya@expat-lifecoaching.com" class="email-link">galina@yourdomain.com</a></p>
+      <!-- Replace action URL with your form backend endpoint (e.g., Formspree/Basin/Getform) -->
+      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <!-- Honeypot -->
+        <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
-    <p>I reply personally to every message, usually within 24 hours on weekdays.</p>
+        <div class="row">
+          <div>
+            <label for="name">Full name *</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div>
+            <label for="email">Email *</label>
+            <input id="email" name="_replyto" type="email" required autocomplete="email" inputmode="email" />
+          </div>
+        </div>
 
-    <p>A contact form will be added here soon for quick inquiries and booking requests.</p>
-  </div>
+        <div>
+          <label for="topic">Topic</label>
+          <input id="topic" name="topic" type="text" placeholder="Discovery call, packages, availability…" />
+        </div>
 
+        <div>
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <!-- GDPR consent -->
+        <label class="consent">
+          <input type="checkbox" id="consent" name="consent" required />
+          <span>I agree to be contacted regarding my enquiry and consent to the processing of my data for this purpose. View the <a href="privacy.html">Privacy Notice</a>.</span>
+        </label>
+
+        <!-- (Optional) Redirect after success
+        <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html" />
+        -->
+
+        <button type="submit" class="btn" id="submitBtn">Send message</button>
+
+        <div class="success" id="successMsg" role="status" aria-live="polite">
+          Thank you—your message has been sent. I’ll get back to you soon.
+        </div>
+        <div class="error" id="errorMsg" role="alert">
+          Sorry, something went wrong. Please try again or email me via the contact form later.
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- JSON-LD: ContactPage + ContactPoint (no email exposed) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "name": "Contact | Gala Antonini",
+        "url": "https://yourdomain.com/contact.html",
+        "inLanguage": "en-GB",
+        "description": "Contact Gala Antonini for expat and cross-cultural life coaching."
+      },
+      {
+        "@type": "Organization",
+        "name": "Thrive Abroad Coaching",
+        "url": "https://yourdomain.com/",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "url": "https://yourdomain.com/contact.html",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["en","it","ru","lv"]
+        }]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Progressive enhancement: AJAX submit to avoid page reload -->
+  <script>
+    (function () {
+      const form = document.getElementById('contactForm');
+      const successMsg = document.getElementById('successMsg');
+      const errorMsg = document.getElementById('errorMsg');
+      const submitBtn = document.getElementById('submitBtn');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+
+        // Simple required checks (client-side)
+        if (!form.name.value.trim() || !form['_replyto'].value.trim() || !form.message.value.trim() || !form.consent.checked) {
+          errorMsg.textContent = 'Please complete all required fields and consent.';
+          errorMsg.style.display = 'block';
+          return;
+        }
+
+        submitBtn.disabled = true;
+
+        try {
+          const resp = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+          });
+          if (resp.ok) {
+            form.reset();
+            successMsg.style.display = 'block';
+          } else {
+            errorMsg.style.display = 'block';
+          }
+        } catch (err) {
+          errorMsg.style.display = 'block';
+        } finally {
+          submitBtn.disabled = false;
+        }
+      });
+    })();
+  </script>
+
+  <noscript>Some features may not work correctly because JavaScript is disabled.</noscript>
 </body>
 </html>
+

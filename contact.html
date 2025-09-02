@@ -2,22 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Contact | Expat Life Coaching | Gala Antonini</title>
 
-  <!-- Canonical & Robots -->
   <link rel="canonical" href="https://yourdomain.com/contact.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-
-  <!-- SEO Core -->
   <meta name="description" content="Contact Gala Antonini for expat and cross-cultural life coaching. Submit a secure inquiry—London & worldwide." />
   <meta name="keywords" content="contact expat life coach, coaching inquiry, expat coaching London, global nomads coaching contact" />
   <meta name="author" content="Gala Antonini" />
 
-  <!-- Social -->
   <meta property="og:title" content="Contact | Expat Life Coaching | Gala Antonini" />
   <meta property="og:description" content="Get in touch for a discovery call or coaching inquiry—London & worldwide." />
   <meta property="og:type" content="website" />
@@ -27,184 +20,39 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #f6f2ef;
-      color: #333;
-      line-height: 1.6;
+    body { margin:0; font-family: Georgia, serif; background:#f6f2ef; color:#333; line-height:1.6; }
+    .skip-link{ position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus{ left:20px; top:20px; width:auto; height:auto; padding:10px 14px; background:#000; color:#fff; z-index:1000; border-radius:4px; }
+    nav{ background:rgba(255,255,255,0.9); padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
+    .logo{ font-size:1.4em; font-weight:400; letter-spacing:1.2px; color:#333; text-transform:uppercase; }
+    .menu{ display:flex; gap:25px; }
+    .menu a{ text-decoration:none; color:#333; font-size:1em; position:relative; font-weight:500; }
+    .menu a::after{ content:''; position:absolute; width:0%; height:2px; bottom:-4px; left:0; background:#333; transition:0.3s ease; }
+    .menu a:hover::after, .menu a:focus::after{ width:100%; }
+    header{ text-align:center; padding:60px 20px 20px; }
+    header h1{ font-weight:400; font-size:2.2em; margin-bottom:10px; }
+    .divider{ width:80px; height:2px; background:#fff; margin:0 auto 30px; }
+    main{ max-width:840px; margin:auto; padding:30px 20px 60px; font-size:1.05em; }
+    .card{ background:#fff; border-radius:12px; padding:22px; box-shadow:0 1px 0 rgba(0,0,0,0.05); }
+    form{ display:grid; gap:16px; margin-top:10px; }
+    label{ display:block; font-size:0.95em; margin-bottom:6px; }
+    input[type="text"], input[type="email"], textarea{
+      width:100%; padding:12px 14px; border:1px solid rgba(0,0,0,0.15); border-radius:8px; background:#fefefe; font-family:inherit; font-size:1em;
     }
-
-    /* Accessibility: skip link (hidden until focused) */
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-    .skip-link:focus {
-      left: 20px;
-      top: 20px;
-      width: auto;
-      height: auto;
-      padding: 10px 14px;
-      background: #000;
-      color: #fff;
-      z-index: 1000;
-      border-radius: 4px;
-    }
-
-    nav {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.4em;
-      font-weight: 400;
-      letter-spacing: 1.2px;
-      color: #333;
-      text-transform: uppercase;
-    }
-
-    .menu {
-      display: flex;
-      gap: 25px;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: #333;
-      font-size: 1em;
-      position: relative;
-      font-weight: 500;
-    }
-
-    .menu a::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: #333;
-      transition: 0.3s ease;
-    }
-    .menu a:hover::after,
-    .menu a:focus::after {
-      width: 100%;
-    }
-
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-    }
-    header h1 {
-      font-weight: 400;
-      font-size: 2.2em;
-      margin-bottom: 10px;
-    }
-    .divider {
-      width: 80px;
-      height: 2px;
-      background-color: white;
-      margin: 0 auto 30px;
-    }
-
-    main {
-      max-width: 840px;
-      margin: auto;
-      padding: 30px 20px 60px;
-      font-size: 1.05em;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 22px;
-      box-shadow: 0 1px 0 rgba(0,0,0,0.05);
-    }
-
-    form {
-      display: grid;
-      gap: 16px;
-      margin-top: 10px;
-    }
-    label {
-      display: block;
-      font-size: 0.95em;
-      margin-bottom: 6px;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid rgba(0,0,0,0.15);
-      border-radius: 8px;
-      background: #fefefe;
-      font-family: inherit;
-      font-size: 1em;
-    }
-    textarea { min-height: 140px; resize: vertical; }
-
-    .row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    @media (max-width: 640px) {
-      .row { grid-template-columns: 1fr; }
-    }
-
-    .consent {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: 0.95em;
-    }
-    .consent input { margin-top: 3px; }
-
-    .btn {
-      appearance: none;
-      border: none;
-      border-radius: 10px;
-      padding: 12px 18px;
-      background: #333;
-      color: #fff;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .btn:disabled { opacity: 0.6; cursor: not-allowed; }
-
-    .muted { opacity: 0.95; }
-    .success,
-    .error {
-      display: none;
-      margin-top: 12px;
-      padding: 12px 14px;
-      border-radius: 8px;
-    }
-    .success { background: #e7f7ee; color: #0a6b3a; }
-    .error { background: #fdecec; color: #8a1c1c; }
-
-    /* Honeypot (hidden from users) */
-    .hp {
-      position: absolute !important;
-      left: -50000px !important;
-      top: auto !important;
-      width: 1px !important;
-      height: 1px !important;
-      overflow: hidden !important;
-    }
-
-    @media (max-width: 768px) {
-      nav { flex-direction: column; align-items: flex-start; }
-      .menu { flex-direction: column; gap: 10px; margin-top: 10px; }
-    }
+    textarea{ min-height:140px; resize:vertical; }
+    .row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    @media (max-width:640px){ .row{ grid-template-columns:1fr; } }
+    .consent{ display:flex; align-items:flex-start; gap:10px; font-size:0.95em; }
+    .consent input{ margin-top:3px; }
+    .btn{ appearance:none; border:none; border-radius:10px; padding:12px 18px; background:#333; color:#fff; font-weight:600; cursor:pointer; }
+    .btn:disabled{ opacity:0.6; cursor:not-allowed; }
+    .muted{ opacity:0.95; }
+    .success, .error{ display:none; margin-top:12px; padding:12px 14px; border-radius:8px; }
+    .success{ background:#e7f7ee; color:#0a6b3a; }
+    .error{ background:#fdecec; color:#8a1c1c; }
+    /* Honeypot hidden */
+    .hp{ position:absolute !important; left:-50000px !important; top:auto !important; width:1px !important; height:1px !important; overflow:hidden !important; }
+    @media (max-width:768px){ nav{ flex-direction:column; align-items:flex-start; } .menu{ flex-direction:column; gap:10px; margin-top:10px; } }
   </style>
 </head>
 <body>
@@ -231,13 +79,11 @@
   <main id="main">
     <div class="card" role="region" aria-labelledby="contact-heading">
       <h2 id="contact-heading" style="font-weight:400;margin-top:0;">Get in touch</h2>
-      <p class="muted">
-        Use the form below to enquire about a discovery call, packages, or availability. I reply personally on weekdays.
-      </p>
+      <p class="muted">Use the form below to enquire about a discovery call, packages, or availability. I reply personally on weekdays.</p>
 
-      <!-- Replace action URL with your form backend endpoint (e.g., Formspree/Basin/Getform) -->
-      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-        <!-- Honeypot -->
+      <!-- Single enhanced form -->
+      <form id="contactForm" action="https://formspree.io/f/xovnnblv" method="POST" novalidate>
+        <!-- Honeypot (inside the form) -->
         <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
         <div class="row">
@@ -267,9 +113,8 @@
           <span>I agree to be contacted regarding my enquiry and consent to the processing of my data for this purpose. View the <a href="privacy.html">Privacy Notice</a>.</span>
         </label>
 
-        <!-- (Optional) Redirect after success
-        <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html" />
-        -->
+        <!-- Optional redirect after success -->
+        <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html" /> -->
 
         <button type="submit" class="btn" id="submitBtn">Send message</button>
 
@@ -283,7 +128,7 @@
     </div>
   </main>
 
-  <!-- JSON-LD: ContactPage + ContactPoint (no email exposed) -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -311,7 +156,7 @@
   }
   </script>
 
-  <!-- Progressive enhancement: AJAX submit to avoid page reload -->
+  <!-- AJAX submit -->
   <script>
     (function () {
       const form = document.getElementById('contactForm');
@@ -324,7 +169,6 @@
         successMsg.style.display = 'none';
         errorMsg.style.display = 'none';
 
-        // Simple required checks (client-side)
         if (!form.name.value.trim() || !form['_replyto'].value.trim() || !form.message.value.trim() || !form.consent.checked) {
           errorMsg.textContent = 'Please complete all required fields and consent.';
           errorMsg.style.display = 'block';
@@ -345,7 +189,7 @@
           } else {
             errorMsg.style.display = 'block';
           }
-        } catch (err) {
+        } catch {
           errorMsg.style.display = 'block';
         } finally {
           submitBtn.disabled = false;
@@ -357,4 +201,5 @@
   <noscript>Some features may not work correctly because JavaScript is disabled.</noscript>
 </body>
 </html>
+
 

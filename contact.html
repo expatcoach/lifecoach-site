@@ -11,7 +11,6 @@
 
   <!-- SEO Core -->
   <meta name="description" content="Contact Gala Antonini for expat and cross-cultural life coaching. Submit a secure inquiry—London & worldwide." />
-  <meta name="keywords" content="contact expat life coach, coaching inquiry, expat coaching London, global nomads coaching contact" />
   <meta name="author" content="Gala Antonini" />
 
   <!-- Social -->
@@ -23,60 +22,125 @@
   <meta property="og:image:alt" content="Contact form for expat life coaching with Gala Antonini" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- (Optional) small perf nudge for FlagCDN -->
-  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
+  <!-- Perf for FlagCDN -->
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin />
 
   <style>
-    body { margin:0; font-family: Georgia, serif; background:#f6f2ef; color:#333; line-height:1.6; }
-    .skip-link{ position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
-    .skip-link:focus{ left:20px; top:20px; width:auto; height:auto; padding:10px 14px; background:#000; color:#fff; z-index:1000; border-radius:4px; }
+    /* ===== Color System (consistent everywhere) ===== */
+    :root{
+      --bg: #f6f2ef;        /* page background */
+      --surface: #ffffff;   /* cards, inputs */
+      --text: #1f1f1f;      /* primary text */
+      --muted: #666666;     /* secondary text */
+      --border: rgba(0,0,0,.14);
+      --accent: #222222;    /* buttons/links/underline */
+      --error: #c62828;
+      --shadow: 0 1px 0 rgba(0,0,0,.05);
+      --radius: 12px;
+    }
 
-    nav{ background:rgba(255,255,255,0.9); padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
-    .logo{ font-size:1.4em; font-weight:400; letter-spacing:1.2px; color:#333; text-transform:uppercase; }
-    .menu{ display:flex; gap:25px; }
-    .menu a{ text-decoration:none; color:#333; font-size:1em; position:relative; font-weight:500; }
-    .menu a::after{ content:''; position:absolute; width:0%; height:2px; bottom:-4px; left:0; background:#333; transition:0.3s ease; }
+    *{ box-sizing: border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Accessibility: skip link */
+    .skip-link{ position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus{ left:16px; top:16px; width:auto; height:auto; padding:10px 14px; background:#000; color:#fff; z-index:1000; border-radius:6px; }
+
+    /* ===== Nav (solid color, no transparency) ===== */
+    nav{
+      background: #ffffff;                /* solid on mobile for color stability */
+      border-bottom: 1px solid var(--border);
+      padding: 14px 16px;
+      display:flex; justify-content:space-between; align-items:center;
+      position: sticky; top:0; z-index: 20;
+    }
+    .logo{ font-size:1rem; font-weight:400; letter-spacing:1.2px; color:var(--text); text-transform:uppercase; }
+    .menu{ display:flex; gap:14px; flex-wrap:wrap; }
+    .menu a{
+      text-decoration:none; color:var(--text); font-size:.95rem; position:relative; font-weight:500; padding:6px 2px;
+    }
+    .menu a::after{
+      content:''; position:absolute; width:0%; height:2px; bottom:-4px; left:0; background:var(--accent); transition:.25s ease;
+    }
     .menu a:hover::after, .menu a:focus::after{ width:100%; }
 
-    header{ text-align:center; padding:60px 20px 20px; }
-    header h1{ font-weight:400; font-size:2.2em; margin-bottom:10px; }
-    .divider{ width:80px; height:2px; background:#fff; margin:0 auto 30px; }
+    /* ===== Header ===== */
+    header{ text-align:center; padding:28px 16px 8px; }
+    header h1{ font-weight:400; font-size:1.75rem; margin:0 0 8px; }
+    .divider{ width:80px; height:2px; background:#ffffff; margin:0 auto 20px; }
 
-    main{ max-width:840px; margin:auto; padding:30px 20px 60px; font-size:1.05em; }
-    .card{ background:#fff; border-radius:12px; padding:22px; box-shadow:0 1px 0 rgba(0,0,0,0.05); }
+    /* ===== Main Card ===== */
+    main{ max-width:860px; margin:auto; padding:12px 16px 48px; font-size:1.05rem; }
+    .card{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
 
-    form{ display:grid; gap:16px; margin-top:10px; }
-    label{ display:block; font-size:0.95em; margin-bottom:6px; }
+    /* ===== Form Elements ===== */
+    form{ display:grid; gap:16px; margin-top:8px; }
+    label{ display:block; font-size:1rem; margin-bottom:6px; color:var(--text); }
+
     input[type="text"], input[type="email"], input[type="tel"], textarea, input[list]{
-      width:100%; padding:12px 14px; border:1px solid rgba(0,0,0,0.15); border-radius:8px; background:#fefefe; font-family:inherit; font-size:1em;
+      width:100%; padding:14px 16px; border:1px solid var(--border);
+      border-radius:10px; background: var(--surface); font-family:inherit; font-size:1rem; color:var(--text);
     }
     textarea{ min-height:140px; resize:vertical; }
 
     .row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-    .row-3{ display:grid; grid-template-columns:1fr 2fr; gap:16px; }
-    @media (max-width:640px){ .row, .row-3{ grid-template-columns:1fr; } }
+    .row-cc{ display:grid; grid-template-columns:1fr 2fr; gap:16px; }
 
-    .consent{ display:flex; align-items:flex-start; gap:10px; font-size:0.95em; }
-    .consent input{ margin-top:3px; }
+    .consent{ display:flex; align-items:flex-start; gap:10px; font-size:1rem; color:var(--text); }
+    .consent input{ margin-top:4px; }
 
-    .btn{ appearance:none; border:none; border-radius:10px; padding:12px 18px; background:#333; color:#fff; font-weight:600; cursor:pointer; }
-    .btn:disabled{ opacity:0.6; cursor:not-allowed; }
+    .btn{
+      appearance:none; border:none; border-radius:12px; padding:16px 18px;
+      background: var(--accent); color:#fff; font-weight:700; cursor:pointer; width:100%;
+      font-size:1.05rem;
+    }
+    .btn:disabled{ opacity:.6; cursor:not-allowed; }
 
-    .muted{ opacity:0.95; }
-    .success, .error{ display:none; margin-top:12px; padding:12px 14px; border-radius:8px; }
+    .muted{ color:var(--muted); }
+    .success, .error{ display:none; margin-top:10px; padding:12px 14px; border-radius:10px; }
     .success{ background:#e7f7ee; color:#0a6b3a; }
     .error{ background:#fdecec; color:#8a1c1c; }
 
     .hp{ position:absolute !important; left:-50000px !important; top:auto !important; width:1px !important; height:1px !important; overflow:hidden !important; }
-    .field-error{ border-color:#c62828 !important; box-shadow:0 0 0 2px rgba(198,40,40,0.08); }
-    .error-text{ color:#c62828; font-size:0.92em; margin-top:6px; display:none; }
+    .field-error{ border-color:var(--error) !important; box-shadow:0 0 0 2px rgba(198,40,40,.08); }
+    .error-text{ color:var(--error); font-size:.95rem; margin-top:6px; display:none; }
     .show{ display:block !important; }
 
     /* Flag input group */
     .flag-input{ display:flex; align-items:center; gap:10px; }
     .flag-img{
-      width:24px; height:18px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,0.05);
-      background: #eee;
+      width:28px; height:21px; border-radius:3px; object-fit:cover;
+      background:#eee; box-shadow:0 0 0 1px rgba(0,0,0,.08);
+      flex: 0 0 28px;
+    }
+
+    /* ===== Mobile-first polish ===== */
+    @media (max-width: 900px){
+      .row, .row-cc{ grid-template-columns:1fr; }
+    }
+    @media (max-width: 480px){
+      .logo{ font-size:.95rem; }
+      header{ padding-top:20px; }
+      header h1{ font-size:1.5rem; }
+      .menu{ gap:10px; }
+      input, textarea{ font-size:1.05rem; }
+      .card{ padding:16px; }
     }
   </style>
 </head>
@@ -103,8 +167,8 @@
 
   <main id="main">
     <div class="card" role="region" aria-labelledby="contact-heading">
-      <h2 id="contact-heading" style="font-weight:400;margin-top:0;">Get in touch</h2>
-      <p class="muted">Use the form below to enquire about a discovery call, packages, or availability. I reply personally on weekdays.</p>
+      <h2 id="contact-heading" style="font-weight:400;margin:0 0 8px;">Get in touch</h2>
+      <p class="muted" style="margin:0 0 8px;">Use the form below to enquire about a discovery call, packages, or availability. I reply personally on weekdays.</p>
 
       <!-- Web3Forms: single enhanced form -->
       <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
@@ -115,9 +179,8 @@
         <input type="hidden" name="subject" value="New coaching enquiry from website" />
         <input type="hidden" name="from_name" value="Website Contact Form" />
 
-        <!-- Web3Forms recommended honeypot -->
+        <!-- Honeypots -->
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <!-- Additional honeypot (ours) -->
         <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
         <!-- Row 1: name + email -->
@@ -132,82 +195,32 @@
           </div>
         </div>
 
-        <!-- Row 2: searchable country code (auto-format + SVG flag) + phone (required) -->
-        <div class="row-3">
+        <!-- Row 2: country code (searchable + flags) + phone (required) -->
+        <div class="row-cc">
           <div>
             <label for="country_code">Country code *</label>
             <div class="flag-input">
-              <img id="flagImg" class="flag-img" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='18'><rect width='24' height='18' fill='%23e5e5e5'/><circle cx='12' cy='9' r='4' fill='%23c7c7c7'/></svg>">
+              <img
+                id="flagImg"
+                class="flag-img"
+                alt="Country flag"
+                width="28" height="21"
+                src="https://flagcdn.com/24x18/gb.svg"
+                srcset="https://flagcdn.com/24x18/gb.svg 1x, https://flagcdn.com/48x36/gb.svg 2x"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
               <input
                 id="country_code"
                 name="country_code"
                 list="country-codes"
                 required
                 placeholder="Type country or code (e.g., +44, UK)"
-                aria-describedby="cc-hint"
+                autocomplete="off"
+                inputmode="search"
               />
             </div>
-            <datalist id="country-codes">
-              <!-- Expand as needed -->
-              <option value="+44 — United Kingdom"></option>
-              <option value="+39 — Italy"></option>
-              <option value="+34 — Spain"></option>
-              <option value="+41 — Switzerland"></option>
-              <option value="+371 — Latvia"></option>
-              <option value="+7 — Russia/Kazakhstan"></option>
-              <option value="+1 — United States / Canada"></option>
-              <option value="+33 — France"></option>
-              <option value="+49 — Germany"></option>
-              <option value="+353 — Ireland"></option>
-              <option value="+351 — Portugal"></option>
-              <option value="+31 — Netherlands"></option>
-              <option value="+32 — Belgium"></option>
-              <option value="+45 — Denmark"></option>
-              <option value="+46 — Sweden"></option>
-              <option value="+47 — Norway"></option>
-              <option value="+30 — Greece"></option>
-              <option value="+420 — Czechia"></option>
-              <option value="+421 — Slovakia"></option>
-              <option value="+40 — Romania"></option>
-              <option value="+43 — Austria"></option>
-              <option value="+90 — Türkiye"></option>
-              <option value="+52 — Mexico"></option>
-              <option value="+55 — Brazil"></option>
-              <option value="+56 — Chile"></option>
-              <option value="+57 — Colombia"></option>
-              <option value="+58 — Venezuela"></option>
-              <option value="+61 — Australia"></option>
-              <option value="+64 — New Zealand"></option>
-              <option value="+971 — United Arab Emirates"></option>
-              <option value="+65 — Singapore"></option>
-              <option value="+852 — Hong Kong"></option>
-              <option value="+81 — Japan"></option>
-              <option value="+82 — South Korea"></option>
-              <option value="+86 — China"></option>
-              <option value="+91 — India"></option>
-              <option value="+20 — Egypt"></option>
-              <option value="+212 — Morocco"></option>
-              <option value="+234 — Nigeria"></option>
-              <option value="+254 — Kenya"></option>
-              <option value="+27 — South Africa"></option>
-              <option value="+92 — Pakistan"></option>
-              <option value="+94 — Sri Lanka"></option>
-              <option value="+62 — Indonesia"></option>
-              <option value="+60 — Malaysia"></option>
-              <option value="+63 — Philippines"></option>
-              <option value="+66 — Thailand"></option>
-              <option value="+972 — Israel"></option>
-              <option value="+970 — Palestine"></option>
-              <option value="+84 — Vietnam"></option>
-              <option value="+975 — Bhutan"></option>
-              <option value="+977 — Nepal"></option>
-              <option value="+960 — Maldives"></option>
-              <option value="+679 — Fiji"></option>
-              <option value="+691 — Micronesia"></option>
-              <option value="+692 — Marshall Islands"></option>
-              <option value="+">Other/Unknown</option>
-            </datalist>
-            <!-- helper text intentionally removed -->
+            <datalist id="country-codes"></datalist>
           </div>
           <div>
             <label for="phone">Contact number *</label>
@@ -219,8 +232,8 @@
               required
               placeholder="Enter your number"
               pattern="^[0-9\\s()+-]{6,20}$"
+              autocomplete="tel"
             />
-            <!-- helper text intentionally removed -->
           </div>
         </div>
 
@@ -282,9 +295,9 @@
   }
   </script>
 
-  <!-- AJAX + auto-format + SVG flag update -->
+  <!-- JS: build world list, auto-format, colorful SVG flags, AJAX submit -->
   <script>
-    (function () {
+    (function(){
       const form = document.getElementById('contactForm');
       const successMsg = document.getElementById('successMsg');
       const errorMsg = document.getElementById('errorMsg');
@@ -295,106 +308,260 @@
       const phone = document.getElementById('phone');
       const country = document.getElementById('country_code');
       const flagImg = document.getElementById('flagImg');
+      const datalist = document.getElementById('country-codes');
 
-      // Map of dial code => ISO (primary) for flag display
-      const dialToISO = {
-        "+1":"us", "+44":"gb", "+39":"it", "+34":"es", "+41":"ch", "+33":"fr", "+49":"de", "+353":"ie",
-        "+351":"pt", "+31":"nl", "+32":"be", "+45":"dk", "+46":"se", "+47":"no", "+30":"gr", "+420":"cz",
-        "+421":"sk", "+40":"ro", "+43":"at", "+90":"tr", "+371":"lv", "+372":"ee", "+370":"lt", "+380":"ua",
-        "+385":"hr", "+386":"si", "+387":"ba", "+389":"mk", "+382":"me", "+381":"rs", "+994":"az", "+995":"ge",
-        "+52":"mx", "+55":"br", "+56":"cl", "+57":"co", "+58":"ve", "+61":"au", "+64":"nz", "+971":"ae",
-        "+65":"sg", "+852":"hk", "+81":"jp", "+82":"kr", "+86":"cn", "+91":"in", "+7":"ru", "+20":"eg",
-        "+212":"ma", "+234":"ng", "+254":"ke", "+27":"za", "+92":"pk", "+94":"lk", "+62":"id", "+60":"my",
-        "+63":"ph", "+66":"th", "+972":"il", "+970":"ps", "+84":"vn", "+975":"bt", "+977":"np", "+960":"mv",
-        "+679":"fj", "+691":"fm", "+692":"mh"
-      };
+      /* ===== World list (broad) ===== */
+      const countries = [
+        {name:"United Kingdom", iso:"gb", dial:"+44"},
+        {name:"United States", iso:"us", dial:"+1"},
+        {name:"Canada", iso:"ca", dial:"+1"},
+        {name:"Italy", iso:"it", dial:"+39"},
+        {name:"Spain", iso:"es", dial:"+34"},
+        {name:"Switzerland", iso:"ch", dial:"+41"},
+        {name:"France", iso:"fr", dial:"+33"},
+        {name:"Germany", iso:"de", dial:"+49"},
+        {name:"Ireland", iso:"ie", dial:"+353"},
+        {name:"Portugal", iso:"pt", dial:"+351"},
+        {name:"Netherlands", iso:"nl", dial:"+31"},
+        {name:"Belgium", iso:"be", dial:"+32"},
+        {name:"Denmark", iso:"dk", dial:"+45"},
+        {name:"Sweden", iso:"se", dial:"+46"},
+        {name:"Norway", iso:"no", dial:"+47"},
+        {name:"Finland", iso:"fi", dial:"+358"},
+        {name:"Greece", iso:"gr", dial:"+30"},
+        {name:"Czechia", iso:"cz", dial:"+420"},
+        {name:"Slovakia", iso:"sk", dial:"+421"},
+        {name:"Romania", iso:"ro", dial:"+40"},
+        {name:"Austria", iso:"at", dial:"+43"},
+        {name:"Poland", iso:"pl", dial:"+48"},
+        {name:"Hungary", iso:"hu", dial:"+36"},
+        {name:"Ukraine", iso:"ua", dial:"+380"},
+        {name:"Russia", iso:"ru", dial:"+7"},
+        {name:"Latvia", iso:"lv", dial:"+371"},
+        {name:"Lithuania", iso:"lt", dial:"+370"},
+        {name:"Estonia", iso:"ee", dial:"+372"},
+        {name:"Azerbaijan", iso:"az", dial:"+994"},
+        {name:"Georgia", iso:"ge", dial:"+995"},
+        {name:"Armenia", iso:"am", dial:"+374"},
+        {name:"Belarus", iso:"by", dial:"+375"},
+        {name:"Moldova", iso:"md", dial:"+373"},
+        {name:"Iceland", iso:"is", dial:"+354"},
+        {name:"Malta", iso:"mt", dial:"+356"},
+        {name:"Cyprus", iso:"cy", dial:"+357"},
+        {name:"Luxembourg", iso:"lu", dial:"+352"},
+        {name:"Andorra", iso:"ad", dial:"+376"},
+        {name:"Monaco", iso:"mc", dial:"+377"},
+        {name:"San Marino", iso:"sm", dial:"+378"},
+        {name:"Albania", iso:"al", dial:"+355"},
+        {name:"Bosnia & Herzegovina", iso:"ba", dial:"+387"},
+        {name:"Montenegro", iso:"me", dial:"+382"},
+        {name:"Serbia", iso:"rs", dial:"+381"},
+        {name:"North Macedonia", iso:"mk", dial:"+389"},
+        {name:"Slovenia", iso:"si", dial:"+386"},
+        {name:"Croatia", iso:"hr", dial:"+385"},
+        {name:"Bulgaria", iso:"bg", dial:"+359"},
 
-      const DEFAULT_FLAG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='18'><rect width='24' height='18' fill='%23e5e5e5'/><circle cx='12' cy='9' r='4' fill='%23c7c7c7'/></svg>";
+        {name:"United Arab Emirates", iso:"ae", dial:"+971"},
+        {name:"Qatar", iso:"qa", dial:"+974"},
+        {name:"Bahrain", iso:"bh", dial:"+973"},
+        {name:"Kuwait", iso:"kw", dial:"+965"},
+        {name:"Saudi Arabia", iso:"sa", dial:"+966"},
+        {name:"Oman", iso:"om", dial:"+968"},
+        {name:"Jordan", iso:"jo", dial:"+962"},
+        {name:"Lebanon", iso:"lb", dial:"+961"},
+        {name:"Israel", iso:"il", dial:"+972"},
+        {name:"Palestine", iso:"ps", dial:"+970"},
+        {name:"Turkey", iso:"tr", dial:"+90"},
+        {name:"Iran", iso:"ir", dial:"+98"},
 
-      function setFlagForDial(dial){
+        {name:"India", iso:"in", dial:"+91"},
+        {name:"Pakistan", iso:"pk", dial:"+92"},
+        {name:"Sri Lanka", iso:"lk", dial:"+94"},
+        {name:"Bangladesh", iso:"bd", dial:"+880"},
+        {name:"Nepal", iso:"np", dial:"+977"},
+        {name:"Bhutan", iso:"bt", dial:"+975"},
+        {name:"Maldives", iso:"mv", dial:"+960"},
+
+        {name:"Singapore", iso:"sg", dial:"+65"},
+        {name:"Malaysia", iso:"my", dial:"+60"},
+        {name:"Indonesia", iso:"id", dial:"+62"},
+        {name:"Philippines", iso:"ph", dial:"+63"},
+        {name:"Thailand", iso:"th", dial:"+66"},
+        {name:"Vietnam", iso:"vn", dial:"+84"},
+        {name:"Cambodia", iso:"kh", dial:"+855"},
+        {name:"Laos", iso:"la", dial:"+856"},
+        {name:"Myanmar", iso:"mm", dial:"+95"},
+        {name:"Brunei", iso:"bn", dial:"+673"},
+
+        {name:"China", iso:"cn", dial:"+86"},
+        {name:"Hong Kong", iso:"hk", dial:"+852"},
+        {name:"Macau", iso:"mo", dial:"+853"},
+        {name:"Taiwan", iso:"tw", dial:"+886"},
+        {name:"Japan", iso:"jp", dial:"+81"},
+        {name:"South Korea", iso:"kr", dial:"+82"},
+        {name:"Mongolia", iso:"mn", dial:"+976"},
+
+        {name:"Australia", iso:"au", dial:"+61"},
+        {name:"New Zealand", iso:"nz", dial:"+64"},
+        {name:"Fiji", iso:"fj", dial:"+679"},
+        {name:"Papua New Guinea", iso:"pg", dial:"+675"},
+        {name:"Samoa", iso:"ws", dial:"+685"},
+        {name:"Tonga", iso:"to", dial:"+676"},
+        {name:"Vanuatu", iso:"vu", dial:"+678"},
+        {name:"Kiribati", iso:"ki", dial:"+686"},
+        {name:"Tuvalu", iso:"tv", dial:"+688"},
+        {name:"French Polynesia", iso:"pf", dial:"+689"},
+        {name:"New Caledonia", iso:"nc", dial:"+687"},
+        {name:"Micronesia", iso:"fm", dial:"+691"},
+        {name:"Marshall Islands", iso:"mh", dial:"+692"},
+        {name:"Cook Islands", iso:"ck", dial:"+682"},
+
+        {name:"Mexico", iso:"mx", dial:"+52"},
+        {name:"Guatemala", iso:"gt", dial:"+502"},
+        {name:"Belize", iso:"bz", dial:"+501"},
+        {name:"El Salvador", iso:"sv", dial:"+503"},
+        {name:"Honduras", iso:"hn", dial:"+504"},
+        {name:"Nicaragua", iso:"ni", dial:"+505"},
+        {name:"Costa Rica", iso:"cr", dial:"+506"},
+        {name:"Panama", iso:"pa", dial:"+507"},
+        {name:"Jamaica", iso:"jm", dial:"+1-876"},
+        {name:"Dominican Republic", iso:"do", dial:"+1-809"},
+        {name:"Puerto Rico", iso:"pr", dial:"+1-787"},
+        {name:"Cuba", iso:"cu", dial:"+53"},
+        {name:"Haiti", iso:"ht", dial:"+509"},
+        {name:"Trinidad & Tobago", iso:"tt", dial:"+1-868"},
+        {name:"Barbados", iso:"bb", dial:"+1-246"},
+        {name:"Bahamas", iso:"bs", dial:"+1-242"},
+
+        {name:"Brazil", iso:"br", dial:"+55"},
+        {name:"Argentina", iso:"ar", dial:"+54"},
+        {name:"Chile", iso:"cl", dial:"+56"},
+        {name:"Colombia", iso:"co", dial:"+57"},
+        {name:"Peru", iso:"pe", dial:"+51"},
+        {name:"Uruguay", iso:"uy", dial:"+598"},
+        {name:"Paraguay", iso:"py", dial:"+595"},
+        {name:"Bolivia", iso:"bo", dial:"+591"},
+        {name:"Ecuador", iso:"ec", dial:"+593"},
+        {name:"Venezuela", iso:"ve", dial:"+58"},
+        {name:"Guyana", iso:"gy", dial:"+592"},
+        {name:"Suriname", iso:"sr", dial:"+597"},
+
+        {name:"Egypt", iso:"eg", dial:"+20"},
+        {name:"Morocco", iso:"ma", dial:"+212"},
+        {name:"Algeria", iso:"dz", dial:"+213"},
+        {name:"Tunisia", iso:"tn", dial:"+216"},
+        {name:"Libya", iso:"ly", dial:"+218"},
+        {name:"Mauritania", iso:"mr", dial:"+222"},
+        {name:"Senegal", iso:"sn", dial:"+221"},
+        {name:"Ghana", iso:"gh", dial:"+233"},
+        {name:"Nigeria", iso:"ng", dial:"+234"},
+        {name:"Ivory Coast", iso:"ci", dial:"+225"},
+        {name:"Cameroon", iso:"cm", dial:"+237"},
+        {name:"Ethiopia", iso:"et", dial:"+251"},
+        {name:"Kenya", iso:"ke", dial:"+254"},
+        {name:"Tanzania", iso:"tz", dial:"+255"},
+        {name:"Uganda", iso:"ug", dial:"+256"},
+        {name:"Rwanda", iso:"rw", dial:"+250"},
+        {name:"DR Congo", iso:"cd", dial:"+243"},
+        {name:"Zambia", iso:"zm", dial:"+260"},
+        {name:"Zimbabwe", iso:"zw", dial:"+263"},
+        {name:"Namibia", iso:"na", dial:"+264"},
+        {name:"Botswana", iso:"bw", dial:"+267"},
+        {name:"Mozambique", iso:"mz", dial:"+258"},
+        {name:"Madagascar", iso:"mg", dial:"+261"},
+        {name:"South Africa", iso:"za", dial:"+27"},
+
+        {name:"U.S. Virgin Islands", iso:"vi", dial:"+1-340"},
+        {name:"Cayman Islands", iso:"ky", dial:"+1-345"},
+        {name:"Bermuda", iso:"bm", dial:"+1-441"},
+        {name:"Turks & Caicos", iso:"tc", dial:"+1-649"},
+        {name:"Guam", iso:"gu", dial:"+1-671"},
+        {name:"American Samoa", iso:"as", dial:"+1-684"},
+        {name:"Greenland", iso:"gl", dial:"+299"},
+        {name:"Faroe Islands", iso:"fo", dial:"+298"},
+        {name:"Isle of Man", iso:"im", dial:"+44"},
+        {name:"Jersey", iso:"je", dial:"+44"},
+        {name:"Guernsey", iso:"gg", dial:"+44"}
+      ];
+
+      // Build datalist and dial -> iso
+      const dialToISO = {};
+      const frag = document.createDocumentFragment();
+      countries.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = `${c.dial} — ${c.name}`;
+        frag.appendChild(opt);
+        if (!dialToISO[c.dial]) dialToISO[c.dial] = c.iso; // first wins
+      });
+      datalist.appendChild(frag);
+
+      // Default flag = GB
+      function setFlagByDial(dial){
         const iso = dialToISO[dial];
-        if (!iso) { flagImg.src = DEFAULT_FLAG; flagImg.alt = ""; return; }
-        const url = "https://flagcdn.com/24x18/" + iso + ".svg";
-        flagImg.src = url;
-        flagImg.alt = "Flag";
-        // fallback if not found / blocked
-        flagImg.onerror = () => { flagImg.src = DEFAULT_FLAG; };
+        const src1x = iso ? `https://flagcdn.com/24x18/${iso}.svg` : `https://flagcdn.com/24x18/gb.svg`;
+        const src2x = iso ? `https://flagcdn.com/48x36/${iso}.svg` : `https://flagcdn.com/48x36/gb.svg`;
+        flagImg.src = src1x;
+        flagImg.srcset = `${src1x} 1x, ${src2x} 2x`;
+        flagImg.alt = iso ? `Flag of ${dial}` : "Flag";
       }
+      setFlagByDial("+44");
 
       function normalizeCountryInput(){
-        // Accept entries like "+44 — United Kingdom", "44", "UK", etc.
         let v = country.value.trim();
 
-        // If includes a +NNN, extract first +digits
-        const matchPlus = v.match(/\+\d{1,4}/);
-        if(matchPlus){
-          country.value = matchPlus[0];
-          setFlagForDial(matchPlus[0]);
+        // Prefer +digits (handles things like "+1-787" by taking +1)
+        const plusMatch = v.match(/\+\d{1,4}/);
+        if (plusMatch) {
+          country.value = plusMatch[0];
+          setFlagByDial(plusMatch[0]);
           return;
         }
 
-        // If digits only (e.g., "44"), prefix +
+        // digits only -> +digits
         const digits = v.replace(/\D/g,'');
-        if(digits){
-          const dial = "+" + digits;
+        if (digits) {
+          const dial = `+${digits}`;
           country.value = dial;
-          setFlagForDial(dial);
+          setFlagByDial(dial);
           return;
         }
 
-        // Map common text aliases to codes
+        // full country name exact match
         const alias = v.toLowerCase();
-        const textMap = {
-          "uk":"+44", "united kingdom":"+44", "britain":"+44", "england":"+44",
-          "italy":"+39", "spain":"+34", "switzerland":"+41", "latvia":"+371",
-          "russia":"+7", "kazakhstan":"+7", "united states":"+1", "usa":"+1", "us":"+1", "canada":"+1",
-          "france":"+33", "germany":"+49", "ireland":"+353", "portugal":"+351", "netherlands":"+31",
-          "belgium":"+32", "denmark":"+45", "sweden":"+46", "norway":"+47", "greece":"+30",
-          "czechia":"+420", "slovakia":"+421", "romania":"+40", "austria":"+43", "turkey":"+90",
-          "mexico":"+52", "brazil":"+55", "chile":"+56", "colombia":"+57", "venezuela":"+58",
-          "australia":"+61", "new zealand":"+64", "uae":"+971", "united arab emirates":"+971",
-          "singapore":"+65", "hong kong":"+852", "japan":"+81", "south korea":"+82", "korea":"+82",
-          "china":"+86", "india":"+91", "egypt":"+20", "morocco":"+212", "nigeria":"+234",
-          "kenya":"+254", "south africa":"+27", "pakistan":"+92", "sri lanka":"+94", "indonesia":"+62",
-          "malaysia":"+60", "philippines":"+63", "thailand":"+66", "israel":"+972", "palestine":"+970",
-          "vietnam":"+84", "bhutan":"+975", "nepal":"+977", "maldives":"+960", "fiji":"+679",
-          "micronesia":"+691", "marshall islands":"+692"
-        };
-        if(textMap[alias]){
-          country.value = textMap[alias];
-          setFlagForDial(textMap[alias]);
+        const found = countries.find(c => c.name.toLowerCase() === alias);
+        if (found) {
+          country.value = found.dial.replace(/[^+\d].*$/,'');
+          setFlagByDial(country.value);
           return;
         }
 
-        // Fallback
-        flagImg.src = DEFAULT_FLAG;
+        // otherwise keep GB
+        setFlagByDial("+44");
       }
 
       country.addEventListener('change', normalizeCountryInput);
       country.addEventListener('input', normalizeCountryInput);
-      if(country.value) normalizeCountryInput();
 
       function clearFieldErrors() {
         [phone, country, consentWrap].forEach(el => el.classList.remove('field-error'));
         consentError.classList.remove('show');
       }
 
+      // Submit handler (AJAX to Web3Forms)
       form.addEventListener('submit', async function (e) {
         e.preventDefault();
         successMsg.style.display = 'none';
         errorMsg.style.display = 'none';
         clearFieldErrors();
 
-        // Ensure country code is clean like "+44"
-        normalizeCountryInput();
+        normalizeCountryInput(); // ensure +NN clean
 
-        // Basic required checks
+        // Required checks
         if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
           errorMsg.textContent = 'Please complete all required fields.';
           errorMsg.style.display = 'block';
           return;
         }
-        // Country code required in +digits format
         if (!country.value || !/^\+\d{1,4}$/.test(country.value)) {
           errorMsg.textContent = 'Please select your country code.';
           errorMsg.style.display = 'block';
@@ -402,7 +569,6 @@
           country.focus();
           return;
         }
-        // Phone required + basic pattern
         if (!phone.value.trim() || !phone.checkValidity()) {
           errorMsg.textContent = 'Please enter a valid contact number.';
           errorMsg.style.display = 'block';
@@ -410,7 +576,6 @@
           phone.focus();
           return;
         }
-        // Consent required
         if (!consent.checked) {
           errorMsg.textContent = 'Please tick the privacy consent box to proceed.';
           errorMsg.style.display = 'block';
@@ -420,10 +585,10 @@
           return;
         }
 
-        // Honeypots: if filled, treat as spam but show success (silent drop)
+        // Honeypot
         if ((form.botcheck && form.botcheck.checked) || (form.company && form.company.value)) {
           form.reset();
-          flagImg.src = DEFAULT_FLAG;
+          setFlagByDial("+44");
           successMsg.style.display = 'block';
           return;
         }
@@ -436,12 +601,11 @@
             headers: { 'Accept': 'application/json' },
             body: new FormData(form)
           });
-
           const data = await resp.json().catch(() => ({}));
 
           if (resp.ok && data.success !== false) {
             form.reset();
-            flagImg.src = DEFAULT_FLAG;
+            setFlagByDial("+44");
             successMsg.style.display = 'block';
           } else {
             let msg = 'Submission error.';
@@ -463,8 +627,6 @@
   <noscript>Some features may not work correctly because JavaScript is disabled.</noscript>
 </body>
 </html>
-
-
 
 
 

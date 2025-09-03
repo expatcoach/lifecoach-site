@@ -97,8 +97,8 @@
 
       <!-- Web3Forms: single enhanced form -->
       <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-        <!-- REQUIRED: your Web3Forms Access Key -->
-        <input type="hidden" name="access_key" value="a330clea-8e5b4f54-9216-442f513efeb3" />
+        <!-- REQUIRED: your exact Web3Forms Access Key (copy/paste from dashboard) -->
+        <input type="hidden" name="access_key" value="a330c1ea-8e5b-4f54-9216-442f513efeb3" />
 
         <!-- Optional: nicer email subject + from label in notification -->
         <input type="hidden" name="subject" value="New coaching enquiry from website" />
@@ -178,7 +178,7 @@
   }
   </script>
 
-  <!-- AJAX submit for Web3Forms -->
+  <!-- AJAX submit for Web3Forms (shows real error text if any) -->
   <script>
     (function () {
       const form = document.getElementById('contactForm');
@@ -220,7 +220,10 @@
             form.reset();
             successMsg.style.display = 'block';
           } else {
-            errorMsg.textContent = (data && data.message) ? data.message : 'Submission error. Please try again.';
+            let msg = 'Submission error.';
+            if (data && data.message) msg += ' ' + data.message;
+            msg += ' (Status ' + resp.status + ')';
+            errorMsg.textContent = msg;
             errorMsg.style.display = 'block';
           }
         } catch (err) {
@@ -236,6 +239,7 @@
   <noscript>Some features may not work correctly because JavaScript is disabled.</noscript>
 </body>
 </html>
+
 
 
 

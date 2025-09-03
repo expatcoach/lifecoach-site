@@ -25,8 +25,6 @@
 
   <style>
     body { margin:0; font-family: Georgia, serif; background:#f6f2ef; color:#333; line-height:1.6; }
-
-    /* Accessibility: skip link (hidden until focused) */
     .skip-link{ position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
     .skip-link:focus{ left:20px; top:20px; width:auto; height:auto; padding:10px 14px; background:#000; color:#fff; z-index:1000; border-radius:4px; }
 
@@ -46,13 +44,14 @@
 
     form{ display:grid; gap:16px; margin-top:10px; }
     label{ display:block; font-size:0.95em; margin-bottom:6px; }
-    input[type="text"], input[type="email"], textarea{
+    input[type="text"], input[type="email"], input[type="tel"], textarea, select, input[list]{
       width:100%; padding:12px 14px; border:1px solid rgba(0,0,0,0.15); border-radius:8px; background:#fefefe; font-family:inherit; font-size:1em;
     }
     textarea{ min-height:140px; resize:vertical; }
 
     .row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-    @media (max-width:640px){ .row{ grid-template-columns:1fr; } }
+    .row-3{ display:grid; grid-template-columns:1fr 2fr; gap:16px; }
+    @media (max-width:640px){ .row, .row-3{ grid-template-columns:1fr; } }
 
     .consent{ display:flex; align-items:flex-start; gap:10px; font-size:0.95em; }
     .consent input{ margin-top:3px; }
@@ -65,8 +64,19 @@
     .success{ background:#e7f7ee; color:#0a6b3a; }
     .error{ background:#fdecec; color:#8a1c1c; }
 
-    /* Honeypots (hidden) */
     .hp{ position:absolute !important; left:-50000px !important; top:auto !important; width:1px !important; height:1px !important; overflow:hidden !important; }
+
+    .field-error{ border-color:#c62828 !important; box-shadow:0 0 0 2px rgba(198,40,40,0.08); }
+    .error-text{ color:#c62828; font-size:0.92em; margin-top:6px; display:none; }
+    .show{ display:block !important; }
+
+    /* Flag input group */
+    .flag-input{
+      display:flex; align-items:center; gap:10px;
+    }
+    .flag-badge{
+      min-width: 2.2em; text-align:center; font-size:1.2em; line-height:1; filter: saturate(1.1);
+    }
   </style>
 </head>
 <body>
@@ -106,10 +116,10 @@
 
         <!-- Web3Forms recommended honeypot -->
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
         <!-- Additional honeypot (ours) -->
         <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
+        <!-- Row 1: name + email -->
         <div class="row">
           <div>
             <label for="name">Full name *</label>
@@ -118,6 +128,110 @@
           <div>
             <label for="email">Email *</label>
             <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" />
+          </div>
+        </div>
+
+        <!-- Row 2: searchable country code (auto-format + flag) + phone (required) -->
+        <div class="row-3">
+          <div>
+            <label for="country_code">Country code *</label>
+            <div class="flag-input">
+              <span class="flag-badge" id="flagBadge" aria-hidden="true">🌍</span>
+              <input
+                id="country_code"
+                name="country_code"
+                list="country-codes"
+                required
+                placeholder="Type country or code (e.g., +44, UK)"
+                aria-describedby="cc-hint"
+              />
+            </div>
+            <datalist id="country-codes">
+              <!-- (sample—expand as needed; suggestions carry both code and name) -->
+              <option value="+44 — United Kingdom"></option>
+              <option value="+39 — Italy"></option>
+              <option value="+34 — Spain"></option>
+              <option value="+41 — Switzerland"></option>
+              <option value="+371 — Latvia"></option>
+              <option value="+7 — Russia/Kazakhstan"></option>
+              <option value="+1 — United States / Canada"></option>
+              <option value="+33 — France"></option>
+              <option value="+49 — Germany"></option>
+              <option value="+353 — Ireland"></option>
+              <option value="+351 — Portugal"></option>
+              <option value="+31 — Netherlands"></option>
+              <option value="+32 — Belgium"></option>
+              <option value="+45 — Denmark"></option>
+              <option value="+46 — Sweden"></option>
+              <option value="+47 — Norway"></option>
+              <option value="+30 — Greece"></option>
+              <option value="+420 — Czechia"></option>
+              <option value="+421 — Slovakia"></option>
+              <option value="+40 — Romania"></option>
+              <option value="+43 — Austria"></option>
+              <option value="+90 — Türkiye"></option>
+              <option value="+371 — Latvia"></option>
+              <option value="+372 — Estonia"></option>
+              <option value="+370 — Lithuania"></option>
+              <option value="+380 — Ukraine"></option>
+              <option value="+385 — Croatia"></option>
+              <option value="+386 — Slovenia"></option>
+              <option value="+387 — Bosnia & Herzegovina"></option>
+              <option value="+389 — North Macedonia"></option>
+              <option value="+382 — Montenegro"></option>
+              <option value="+381 — Serbia"></option>
+              <option value="+994 — Azerbaijan"></option>
+              <option value="+995 — Georgia"></option>
+              <option value="+52 — Mexico"></option>
+              <option value="+55 — Brazil"></option>
+              <option value="+56 — Chile"></option>
+              <option value="+57 — Colombia"></option>
+              <option value="+58 — Venezuela"></option>
+              <option value="+61 — Australia"></option>
+              <option value="+64 — New Zealand"></option>
+              <option value="+971 — United Arab Emirates"></option>
+              <option value="+65 — Singapore"></option>
+              <option value="+852 — Hong Kong"></option>
+              <option value="+81 — Japan"></option>
+              <option value="+82 — South Korea"></option>
+              <option value="+86 — China"></option>
+              <option value="+91 — India"></option>
+              <option value="+20 — Egypt"></option>
+              <option value="+212 — Morocco"></option>
+              <option value="+234 — Nigeria"></option>
+              <option value="+254 — Kenya"></option>
+              <option value="+27 — South Africa"></option>
+              <option value="+92 — Pakistan"></option>
+              <option value="+94 — Sri Lanka"></option>
+              <option value="+62 — Indonesia"></option>
+              <option value="+60 — Malaysia"></option>
+              <option value="+63 — Philippines"></option>
+              <option value="+66 — Thailand"></option>
+              <option value="+972 — Israel"></option>
+              <option value="+970 — Palestine"></option>
+              <option value="+84 — Vietnam"></option>
+              <option value="+975 — Bhutan"></option>
+              <option value="+977 — Nepal"></option>
+              <option value="+960 — Maldives"></option>
+              <option value="+679 — Fiji"></option>
+              <option value="+691 — Micronesia"></option>
+              <option value="+692 — Marshall Islands"></option>
+              <option value="+">Other/Unknown</option>
+            </datalist>
+            <small id="cc-hint" class="muted">Pick from suggestions or type your code; it will auto-format to “+NN…”.</small>
+          </div>
+          <div>
+            <label for="phone">Contact number *</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              inputmode="tel"
+              required
+              placeholder="Enter your number"
+              pattern="^[0-9\\s()+-]{6,20}$"
+            />
+            <small class="muted">Digits, spaces, +, (), - allowed.</small>
           </div>
         </div>
 
@@ -132,10 +246,11 @@
         </div>
 
         <!-- GDPR consent -->
-        <label class="consent">
+        <label class="consent" id="consentWrap">
           <input type="checkbox" id="consent" name="consent" required />
           <span>I agree to be contacted regarding my enquiry and consent to the processing of my data for this purpose. View the <a href="privacy.html">Privacy Notice</a>.</span>
         </label>
+        <div id="consentError" class="error-text">Please tick the privacy consent box to proceed.</div>
 
         <!-- Optional: redirect to a Thank You page after success -->
         <!-- <input type="hidden" name="redirect" value="https://yourdomain.com/thanks.html" /> -->
@@ -178,23 +293,141 @@
   }
   </script>
 
-  <!-- AJAX submit for Web3Forms (shows real error text if any) -->
+  <!-- AJAX + auto-format + flag icons -->
   <script>
     (function () {
       const form = document.getElementById('contactForm');
       const successMsg = document.getElementById('successMsg');
       const errorMsg = document.getElementById('errorMsg');
       const submitBtn = document.getElementById('submitBtn');
+      const consent = document.getElementById('consent');
+      const consentError = document.getElementById('consentError');
+      const consentWrap = document.getElementById('consentWrap');
+      const phone = document.getElementById('phone');
+      const country = document.getElementById('country_code');
+      const flagBadge = document.getElementById('flagBadge');
+
+      // Map of dial code => ISO (primary) then to emoji flag
+      const dialToISO = {
+        "+1":"US", "+44":"GB", "+39":"IT", "+34":"ES", "+41":"CH", "+33":"FR", "+49":"DE", "+353":"IE",
+        "+351":"PT", "+31":"NL", "+32":"BE", "+45":"DK", "+46":"SE", "+47":"NO", "+30":"GR", "+420":"CZ",
+        "+421":"SK", "+40":"RO", "+43":"AT", "+90":"TR", "+371":"LV", "+372":"EE", "+370":"LT", "+380":"UA",
+        "+385":"HR", "+386":"SI", "+387":"BA", "+389":"MK", "+382":"ME", "+381":"RS", "+994":"AZ", "+995":"GE",
+        "+52":"MX", "+55":"BR", "+56":"CL", "+57":"CO", "+58":"VE", "+61":"AU", "+64":"NZ", "+971":"AE",
+        "+65":"SG", "+852":"HK", "+81":"JP", "+82":"KR", "+86":"CN", "+91":"IN", "+7":"RU", "+20":"EG",
+        "+212":"MA", "+234":"NG", "+254":"KE", "+27":"ZA", "+92":"PK", "+94":"LK", "+62":"ID", "+60":"MY",
+        "+63":"PH", "+66":"TH", "+972":"IL", "+970":"PS", "+84":"VN", "+975":"BT", "+977":"NP", "+960":"MV",
+        "+679":"FJ", "+691":"FM", "+692":"MH"
+      };
+
+      function isoToFlag(iso){
+        if(!iso) return "🌍";
+        // Emoji flag via regional indicator symbols
+        return iso.replace(/./g, c => String.fromCodePoint(127397 + c.toUpperCase().charCodeAt(0)));
+      }
+
+      function setFlagForDial(dial){
+        const iso = dialToISO[dial];
+        flagBadge.textContent = isoToFlag(iso);
+      }
+
+      function normalizeCountryInput(){
+        // Accept entries like "+44 — United Kingdom", "44", "UK", etc.
+        let v = country.value.trim();
+
+        // If includes a +NNN, extract first +digits
+        const matchPlus = v.match(/\+\d{1,4}/);
+        if(matchPlus){
+          country.value = matchPlus[0];
+          setFlagForDial(matchPlus[0]);
+          return;
+        }
+
+        // If digits only (e.g., "44"), prefix +
+        const digits = v.replace(/\D/g,'');
+        if(digits){
+          const dial = "+" + digits;
+          country.value = dial;
+          setFlagForDial(dial);
+          return;
+        }
+
+        // If country text like "uk", map a few common aliases
+        const alias = v.toLowerCase();
+        const textMap = {
+          "uk":"+44", "united kingdom":"+44", "britain":"+44", "england":"+44",
+          "italy":"+39", "spain":"+34", "switzerland":"+41", "latvia":"+371",
+          "russia":"+7", "kazakhstan":"+7", "united states":"+1", "usa":"+1",
+          "us":"+1", "canada":"+1", "france":"+33", "germany":"+49", "ireland":"+353",
+          "portugal":"+351", "netherlands":"+31", "belgium":"+32", "denmark":"+45",
+          "sweden":"+46", "norway":"+47", "greece":"+30", "czechia":"+420", "slovakia":"+421",
+          "romania":"+40", "austria":"+43", "turkey":"+90", "mexico":"+52", "brazil":"+55",
+          "chile":"+56", "colombia":"+57", "venezuela":"+58", "australia":"+61", "new zealand":"+64",
+          "uae":"+971", "united arab emirates":"+971", "singapore":"+65", "hong kong":"+852",
+          "japan":"+81", "south korea":"+82", "korea":"+82", "china":"+86", "india":"+91",
+          "egypt":"+20", "morocco":"+212", "nigeria":"+234", "kenya":"+254", "south africa":"+27",
+          "pakistan":"+92", "sri lanka":"+94", "indonesia":"+62", "malaysia":"+60", "philippines":"+63",
+          "thailand":"+66", "israel":"+972", "palestine":"+970", "vietnam":"+84", "bhutan":"+975",
+          "nepal":"+977", "maldives":"+960", "fiji":"+679", "micronesia":"+691", "marshall islands":"+692"
+        };
+        if(textMap[alias]){
+          country.value = textMap[alias];
+          setFlagForDial(textMap[alias]);
+          return;
+        }
+
+        // Fallback
+        flagBadge.textContent = "🌍";
+      }
+
+      country.addEventListener('change', normalizeCountryInput);
+      country.addEventListener('input', normalizeCountryInput);
+      // Initialize flag if a value is prefilled
+      if(country.value) normalizeCountryInput();
+
+      function clearFieldErrors() {
+        [phone, country, consentWrap].forEach(el => el.classList.remove('field-error'));
+        consentError.classList.remove('show');
+      }
 
       form.addEventListener('submit', async function (e) {
         e.preventDefault();
         successMsg.style.display = 'none';
         errorMsg.style.display = 'none';
+        clearFieldErrors();
 
-        // Basic validation
-        if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim() || !form.consent.checked) {
-          errorMsg.textContent = 'Please complete all required fields and consent.';
+        // Ensure country code is clean like "+44"
+        normalizeCountryInput();
+
+        // Basic required checks
+        if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
+          errorMsg.textContent = 'Please complete all required fields.';
           errorMsg.style.display = 'block';
+          return;
+        }
+        // Country code required in +digits format
+        if (!country.value || !/^\+\d{1,4}$/.test(country.value)) {
+          errorMsg.textContent = 'Please select your country code.';
+          errorMsg.style.display = 'block';
+          country.classList.add('field-error');
+          country.focus();
+          return;
+        }
+        // Phone required + basic pattern
+        if (!phone.value.trim() || !phone.checkValidity()) {
+          errorMsg.textContent = 'Please enter a valid contact number.';
+          errorMsg.style.display = 'block';
+          phone.classList.add('field-error');
+          phone.focus();
+          return;
+        }
+        // Consent required
+        if (!consent.checked) {
+          errorMsg.textContent = 'Please tick the privacy consent box to proceed.';
+          errorMsg.style.display = 'block';
+          consentWrap.classList.add('field-error');
+          consentError.classList.add('show');
+          consent.focus();
           return;
         }
 
@@ -218,6 +451,8 @@
 
           if (resp.ok && data.success !== false) {
             form.reset();
+            // Reset flag after clear
+            flagBadge.textContent = "🌍";
             successMsg.style.display = 'block';
           } else {
             let msg = 'Submission error.';
@@ -239,6 +474,7 @@
   <noscript>Some features may not work correctly because JavaScript is disabled.</noscript>
 </body>
 </html>
+
 
 
 

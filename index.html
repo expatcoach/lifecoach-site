@@ -1,194 +1,1506 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  />
-  <title>Life Coaching for Expats & Global Nomads | Gala Antonini</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Vie | Premium Life Coaching for Global Minds</title>
+<meta name="description" content="Maison Vie — exclusive life coaching for expats, global nomads and high-achieving individuals. London & worldwide. English, Russian, Italian.">
+<meta name="keywords" content="expat life coach, life coaching London, coaching for expats, international coaching, life coach Russian, coach for expats London">
+<meta property="og:title" content="Maison Vie | Premium Life Coaching">
+<meta property="og:description" content="Exclusive coaching for global minds. Clarity, confidence, transformation.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.maison-vie.com/">
 
-  <!-- Canonical & Robots -->
-  <link rel="canonical" href="https://yourdomain.com/" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
 
-  <!-- SEO Core -->
-  <meta name="description" content="Life coaching for expats and global nomads by Gala Antonini. Gain clarity, confidence, and connection across cultures. Based in London — working worldwide." />
-  <meta name="keywords" content="life coaching for expats, expat coaching, global nomads coach, cross-cultural coaching, London life coach, transition coaching, thrive abroad" />
-  <meta name="author" content="Gala Antonini" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Life Coaching for Expats & Global Nomads | Gala Antonini" />
-  <meta property="og:description" content="Strategic, cross-cultural life coaching to thrive abroad — clarity, purpose, and confidence wherever you are." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourdomain.com/" />
-  <meta property="og:image" content="https://yourdomain.com/images/preview.jpg" />
-  <meta property="og:image:alt" content="Gala Antonini — Life Coaching for Expats & Global Nomads" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Life Coaching for Expats & Global Nomads | Gala Antonini" />
-  <meta name="twitter:description" content="Cross-cultural coaching for clarity, confidence, and connection — London & worldwide." />
-  <meta name="twitter:image" content="https://yourdomain.com/images/preview.jpg" />
-
-  <!-- Performance hints (optional: replace with real favicon) -->
-  <link rel="icon" href="/favicon.ico" />
-
-  <style>
-    /* Base reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html, body { height: 100%; font-family: Georgia, serif; color: #212121; background-color: #f6f2ef; }
-
-    /* Accessibility helpers */
-    .visually-hidden {
-      position: absolute !important;
-      height: 1px; width: 1px; overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px);
-      white-space: nowrap; border: 0; padding: 0; margin: -1px;
-    }
-    .skip-link {
-      position: absolute; left: -9999px; top: 0; background: #000; color: #fff;
-      padding: 8px 12px; z-index: 2000;
-    }
-    .skip-link:focus { left: 12px; top: 12px; outline: 2px solid #fff; }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: grid;
-      grid-template-rows: auto 1fr;
-      background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url('coach-photo.jpg') center top / cover no-repeat;
-    }
-
-    /* Nav */
-    nav {
-      position: sticky; top: 0;
-      display: flex; justify-content: space-between; align-items: center;
-      gap: 24px; padding: 18px 40px;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: saturate(1.1) blur(6px);
-      z-index: 1000;
-    }
-    .logo {
-      font-size: 1.25rem; letter-spacing: 1.2px; text-transform: uppercase; color: #333; font-weight: 400;
-    }
-    .menu { display: flex; gap: 24px; flex-wrap: wrap; }
-    .menu a {
-      text-decoration: none; color: #333; font-size: 1rem; position: relative; font-weight: 500;
-    }
-    .menu a::after {
-      content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0; background: #333; transition: width .25s ease;
-    }
-    .menu a:hover::after, .menu a:focus::after { width: 100%; }
-
-    /* Hero copy */
-    .hero-inner {
-      display: grid; place-items: center; padding: 96px 20px 48px;
-    }
-    .hero-card {
-      text-align: center; color: #fff;
-      background: rgba(0,0,0,0.38);
-      padding: clamp(16px, 3vw, 28px);
-      border-radius: 14px;
-      max-width: 960px;
-    }
-    h1 {
-      font-weight: 400;
-      font-size: clamp(1.6rem, 3.2vw, 2.4rem);
-      line-height: 1.25;
-      margin-bottom: 10px;
-    }
-    .subtitle {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      line-height: 1.5;
-      opacity: 0.95;
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 768px) {
-      nav { padding: 14px 20px; }
-      .menu { gap: 14px; }
-      .hero-inner { padding-top: 120px; }
-    }
-
-    /* Main (if you add content below the fold later) */
-    main { background: #f6f2ef; }
-  </style>
-
-  <!-- JSON-LD: WebSite + Person (adjust URLs/handles) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "Gala Antonini | Thrive Abroad Coaching",
-        "url": "https://yourdomain.com/",
-        "inLanguage": "en-GB",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://yourdomain.com/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Gala Antonini",
-        "jobTitle": "Life Coach",
-        "url": "https://yourdomain.com/",
-        "description": "Life coaching for expats and global nomads—clarity, confidence, and connection across cultures.",
-        "knowsLanguage": ["en", "it", "ru", "lv"],
-        "worksFor": { "@type": "Organization", "name": "Thrive Abroad Coaching" },
-        "sameAs": [
-          "https://www.linkedin.com/in/your-handle",
-          "https://www.instagram.com/your-handle"
-        ]
-      }
-    ]
+<style>
+  :root {
+    --cream: #F7F3EE;
+    --dark: #0E0D0B;
+    --gold: #B8965A;
+    --gold-light: #D4AE78;
+    --warm-gray: #8A8478;
+    --border: rgba(184,150,90,0.25);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', sans-serif;
   }
-  </script>
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  /* ── CURSOR ── */
+  body { cursor: none; }
+  .cursor {
+    position: fixed; top: 0; left: 0; width: 8px; height: 8px;
+    background: var(--gold); border-radius: 50%; pointer-events: none;
+    z-index: 9999; transform: translate(-50%,-50%);
+    transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  }
+  .cursor-ring {
+    position: fixed; top: 0; left: 0; width: 30px; height: 30px;
+    border: 1px solid var(--gold); border-radius: 50%; pointer-events: none;
+    z-index: 9998; transform: translate(-50%,-50%);
+    transition: transform 0.08s ease;
+    opacity: 0.6;
+  }
+  body:hover .cursor { opacity: 1; }
+
+  /* ── NAVIGATION ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    padding: 28px 60px;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: background 0.4s ease, padding 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(247,243,238,0.95);
+    backdrop-filter: blur(10px);
+    padding: 16px 60px;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dark);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex; gap: 40px; list-style: none; align-items: center;
+  }
+  .nav-links a {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dark);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s, color 0.3s;
+  }
+  .nav-links a:hover { opacity: 1; color: var(--gold); }
+
+  /* Language switcher */
+  .lang-switcher {
+    display: flex; gap: 10px; align-items: center;
+  }
+  .lang-btn {
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid transparent;
+    color: var(--warm-gray);
+    cursor: none;
+    padding: 4px 8px;
+    transition: all 0.3s;
+  }
+  .lang-btn.active, .lang-btn:hover {
+    color: var(--gold);
+    border-color: var(--border);
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    cursor: none; background: none; border: none; padding: 4px;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 1px; background: var(--dark);
+    transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 140px 60px 100px 60px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-eyebrow {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.3s forwards;
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: 0.02em;
+    color: var(--dark);
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.5s forwards;
+  }
+  .hero-title em { font-style: italic; color: var(--gold); }
+
+  .hero-text {
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--warm-gray);
+    line-height: 2;
+    max-width: 420px;
+    margin-bottom: 56px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.7s forwards;
+  }
+  .hero-ctas {
+    display: flex; gap: 24px; align-items: center;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.9s forwards;
+  }
+  .btn-primary {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--dark);
+    text-decoration: none;
+    padding: 16px 36px;
+    border: 1px solid var(--dark);
+    transition: all 0.4s ease;
+    display: inline-block;
+  }
+  .btn-primary:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+  .btn-ghost {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--dark);
+    text-decoration: none;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gold);
+    transition: color 0.3s;
+  }
+  .btn-ghost:hover { color: var(--gold); }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-image-wrap {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, #1a1814 0%, #2c2720 100%);
+    overflow: hidden;
+  }
+  .hero-image-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    mix-blend-mode: luminosity;
+    filter: sepia(20%);
+    animation: slowZoom 20s ease infinite alternate;
+  }
+  .hero-image-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(247,243,238,0.3) 0%, transparent 100%);
+  }
+  .hero-quote {
+    position: absolute; bottom: 60px; right: 50px;
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: rgba(247,243,238,0.8);
+    text-align: right;
+    line-height: 1.7;
+    max-width: 280px;
+    opacity: 0;
+    animation: fadeUp 1s ease 1.2s forwards;
+  }
+  .hero-quote span {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    font-style: normal;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-top: 12px;
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    position: absolute; bottom: 40px; left: 60px;
+    display: flex; align-items: center; gap: 16px;
+    opacity: 0;
+    animation: fadeUp 1s ease 1.5s forwards;
+  }
+  .scroll-line {
+    width: 40px; height: 1px; background: var(--gold);
+    animation: expandLine 2s ease 2s infinite;
+  }
+  .scroll-text {
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+
+  /* ── MARQUEE ── */
+  .marquee-section {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    overflow: hidden;
+    background: var(--dark);
+  }
+  .marquee-track {
+    display: flex; gap: 60px;
+    animation: marquee 25s linear infinite;
+    white-space: nowrap;
+  }
+  .marquee-item {
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+  }
+  .marquee-dot {
+    color: var(--warm-gray);
+    font-size: 0.5rem;
+  }
+
+  /* ── SECTION COMMONS ── */
+  section { padding: 120px 60px; }
+
+  .section-label {
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .section-label::after {
+    content: '';
+    display: block;
+    width: 40px; height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  /* ── PHILOSOPHY / ABOUT ── */
+  .philosophy {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 100px;
+    align-items: center;
+    background: var(--cream);
+  }
+  .philosophy-left { position: relative; }
+  .philosophy-image-frame {
+    position: relative;
+    padding-bottom: 130%;
+    overflow: hidden;
+  }
+  .philosophy-image-frame img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%) sepia(10%);
+    transition: transform 0.8s ease;
+  }
+  .philosophy-image-frame:hover img { transform: scale(1.03); }
+  .philosophy-image-frame::before {
+    content: '';
+    position: absolute;
+    top: -20px; left: -20px;
+    right: 20px; bottom: 20px;
+    border: 1px solid var(--gold);
+    opacity: 0.3;
+    z-index: -1;
+  }
+  .philosophy-right { }
+  .philosophy-body {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 2;
+    margin-bottom: 32px;
+  }
+  .philosophy-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 56px;
+    padding-top: 56px;
+    border-top: 1px solid var(--border);
+  }
+  .stat-number {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+
+  /* ── SERVICES ── */
+  .services { background: var(--dark); color: var(--cream); }
+  .services .section-label { color: var(--gold); }
+  .services .section-title { color: var(--cream); }
+  .services-intro {
+    font-size: 0.95rem;
+    color: rgba(247,243,238,0.55);
+    line-height: 2;
+    max-width: 560px;
+    margin-bottom: 80px;
+    font-weight: 300;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+  .service-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(184,150,90,0.15);
+    padding: 52px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s ease, border-color 0.4s ease;
+    cursor: none;
+  }
+  .service-card:hover {
+    background: rgba(184,150,90,0.07);
+    border-color: rgba(184,150,90,0.4);
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-number {
+    font-family: var(--serif);
+    font-size: 4rem;
+    font-weight: 300;
+    color: rgba(184,150,90,0.15);
+    line-height: 1;
+    margin-bottom: 32px;
+    transition: color 0.4s;
+  }
+  .service-card:hover .service-number { color: rgba(184,150,90,0.3); }
+  .service-name {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--cream);
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+  }
+  .service-desc {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: rgba(247,243,238,0.5);
+    line-height: 2;
+    margin-bottom: 36px;
+  }
+  .service-link {
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 12px;
+    transition: gap 0.3s;
+  }
+  .service-link::after {
+    content: '→';
+    transition: transform 0.3s;
+  }
+  .service-card:hover .service-link { gap: 18px; }
+
+  /* ── PROCESS ── */
+  .process { background: var(--cream); }
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 80px;
+    border: 1px solid var(--border);
+  }
+  .process-step {
+    padding: 52px 40px;
+    border-right: 1px solid var(--border);
+    position: relative;
+    transition: background 0.3s;
+  }
+  .process-step:last-child { border-right: none; }
+  .process-step:hover { background: rgba(184,150,90,0.04); }
+  .process-num {
+    font-family: var(--serif);
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    margin-bottom: 28px;
+  }
+  .process-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--dark);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .process-desc {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 2;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials {
+    background: #1A1814;
+    color: var(--cream);
+    padding: 120px 60px;
+    overflow: hidden;
+    position: relative;
+  }
+  .testimonials::before {
+    content: '"';
+    font-family: var(--serif);
+    font-size: 30rem;
+    color: rgba(184,150,90,0.04);
+    position: absolute;
+    top: -80px; left: 20px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .testimonials-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 80px;
+  }
+  .testimonials-nav { display: flex; gap: 12px; }
+  .testi-btn {
+    width: 44px; height: 44px;
+    border: 1px solid rgba(184,150,90,0.3);
+    background: none;
+    color: var(--gold);
+    font-size: 1rem;
+    cursor: none;
+    transition: all 0.3s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .testi-btn:hover {
+    background: var(--gold);
+    color: var(--dark);
+  }
+  .testimonials-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .testimonial-item {
+    padding: 48px 40px;
+    border: 1px solid rgba(184,150,90,0.12);
+    position: relative;
+    transition: border-color 0.4s;
+  }
+  .testimonial-item:hover { border-color: rgba(184,150,90,0.35); }
+  .testi-stars {
+    display: flex; gap: 4px; margin-bottom: 28px;
+  }
+  .testi-star {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+  .testi-quote {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(247,243,238,0.85);
+    line-height: 1.9;
+    margin-bottom: 36px;
+  }
+  .testi-name {
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .testi-role {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: rgba(247,243,238,0.35);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── OFFER / PRICING ── */
+  .pricing { background: var(--cream); }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 72px;
+  }
+  .pricing-card {
+    border: 1px solid var(--border);
+    padding: 52px 40px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.08);
+  }
+  .pricing-card.featured {
+    background: var(--dark);
+    color: var(--cream);
+    border-color: var(--gold);
+  }
+  .pricing-badge {
+    font-size: 0.55rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--gold);
+    padding: 6px 16px;
+    display: inline-block;
+    margin-bottom: 36px;
+  }
+  .pricing-tier {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .pricing-price {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .pricing-card.featured .pricing-price { color: var(--cream); }
+  .pricing-currency {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    vertical-align: top;
+    margin-top: 12px;
+    display: inline-block;
+  }
+  .pricing-period {
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--warm-gray);
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+    display: block;
+  }
+  .pricing-card.featured .pricing-period { color: rgba(247,243,238,0.5); }
+  .pricing-features {
+    list-style: none;
+    margin-bottom: 48px;
+  }
+  .pricing-features li {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--warm-gray);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .pricing-card.featured .pricing-features li { color: rgba(247,243,238,0.65); border-color: rgba(184,150,90,0.2); }
+  .pricing-features li::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ── INSTAGRAM / SOCIAL ── */
+  .social-section {
+    background: var(--dark);
+    padding: 100px 60px;
+    text-align: center;
+    color: var(--cream);
+  }
+  .social-section .section-label { justify-content: center; }
+  .social-section .section-label::after { display: none; }
+  .social-section .section-label::before {
+    content: '';
+    display: block;
+    width: 40px; height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+  .instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    margin-top: 60px;
+    margin-bottom: 48px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+  }
+  .instagram-grid:hover { opacity: 1; }
+  .insta-placeholder {
+    aspect-ratio: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(184,150,90,0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: rgba(184,150,90,0.3);
+    transition: background 0.3s;
+  }
+  .insta-placeholder:hover { background: rgba(184,150,90,0.08); }
+  .social-handle {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── CONTACT ── */
+  .contact {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+  }
+  .contact-left {
+    padding: 120px 80px 120px 60px;
+    background: var(--cream);
+  }
+  .contact-right {
+    padding: 120px 60px 120px 80px;
+    background: var(--dark);
+    color: var(--cream);
+  }
+  .contact-subtitle {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 2;
+    margin-bottom: 56px;
+  }
+  .contact-form { display: flex; flex-direction: column; gap: 28px; }
+  .form-group { display: flex; flex-direction: column; gap: 10px; }
+  .form-label {
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+  .form-input, .form-textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--dark);
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+  }
+  .form-input:focus, .form-textarea:focus { border-color: var(--gold); }
+  .form-textarea { resize: none; height: 100px; }
+  .form-select {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--dark);
+    outline: none;
+    width: 100%;
+    appearance: none;
+    cursor: none;
+    transition: border-color 0.3s;
+  }
+  .form-select:focus { border-color: var(--gold); }
+  .contact-info { margin-top: 40px; }
+  .contact-info-item {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(184,150,90,0.2);
+    display: flex; align-items: flex-start; gap: 24px;
+  }
+  .contact-info-item:last-child { border-bottom: none; }
+  .info-label {
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    min-width: 100px;
+  }
+  .info-value {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: rgba(247,243,238,0.7);
+    line-height: 1.8;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid rgba(184,150,90,0.15);
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-logo {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+  .footer-logo span { color: var(--gold); }
+  .footer-links {
+    display: flex; gap: 36px; list-style: none;
+  }
+  .footer-links a {
+    font-size: 0.62rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(247,243,238,0.4);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy {
+    font-size: 0.62rem;
+    font-weight: 300;
+    color: rgba(247,243,238,0.25);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes slowZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.08); }
+  }
+  @keyframes expandLine {
+    0%, 100% { transform: scaleX(1); opacity: 1; }
+    50% { transform: scaleX(1.5); opacity: 0.5; }
+  }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 1024px) {
+    nav { padding: 20px 30px; }
+    nav.scrolled { padding: 14px 30px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 80px 30px; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 120px 30px 60px; }
+    .hero-right { height: 60vw; min-height: 320px; }
+    .philosophy { grid-template-columns: 1fr; gap: 60px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr 1fr; }
+    .testimonials-track { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .instagram-grid { grid-template-columns: repeat(3, 1fr); }
+    .contact { grid-template-columns: 1fr; }
+    .contact-left, .contact-right { padding: 80px 30px; }
+    footer { flex-direction: column; gap: 32px; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+  @media (max-width: 640px) {
+    .hero-title { font-size: 2.5rem; }
+    .process-grid { grid-template-columns: 1fr; }
+    .philosophy-stats { grid-template-columns: 1fr 1fr; }
+  }
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="hero" role="banner">
-    <nav aria-label="Main navigation">
-      <div class="logo">Gala Antonini</div>
-      <div class="menu" role="menubar">
-        <a role="menuitem" href="you.html">YOU</a>
-        <a role="menuitem" href="me.html">ME</a>
-        <a role="menuitem" href="we.html">WE</a>
-        <a role="menuitem" href="fees.html">FEES</a>
-        <a role="menuitem" href="location.html">LOCATION</a>
-        <a role="menuitem" href="contact.html">CONTACT</a>
-      </div>
-    </nav>
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
 
-    <div class="hero-inner">
-      <div class="hero-card" role="img" aria-label="Life coaching for expats and global nomads with a cross-cultural focus">
-        <h1>Life Coaching for Global Minds</h1>
-        <p class="subtitle">Strategic, cross-cultural coaching for clarity, confidence, and connection — London &amp; worldwide.</p>
-      </div>
-      <!-- Background images aren't read by screen readers. This hidden image provides alt context for SEO/accessibility. -->
-      <img src="coach-photo.jpg" alt="Gala Antonini in a professional setting, offering life coaching for expats and global nomads" class="visually-hidden" />
+<!-- Navigation -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo">Maison <span>Vie</span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#philosophy" data-i18n="nav_about">About</a></li>
+    <li><a href="#services" data-i18n="nav_services">Services</a></li>
+    <li><a href="#process" data-i18n="nav_process">Process</a></li>
+    <li><a href="#testimonials" data-i18n="nav_testimonials">Testimonials</a></li>
+    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:20px;">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" onclick="setLang('it')">IT</button>
     </div>
-  </header>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-  <main id="main" role="main">
-    <!-- Optional: add content sections below -->
-  </main>
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow" data-i18n="hero_eyebrow">Premium Life Coaching · London & Worldwide</p>
+    <h1 class="hero-title" data-i18n-html="hero_title">Your life,<br><em>curated.</em></h1>
+    <p class="hero-text" data-i18n="hero_text">Exclusive coaching for high-achieving expats and global minds navigating identity, ambition and belonging — with grace.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary" data-i18n="hero_cta_primary">Begin Your Journey</a>
+      <a href="#services" class="btn-ghost" data-i18n="hero_cta_ghost">Explore Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-image-wrap">
+      <img src="coach-photo.jpg" alt="Life coaching for global minds" onerror="this.style.display='none'">
+    </div>
+    <div class="hero-image-overlay"></div>
+    <div class="hero-quote" data-i18n-html="hero_quote">
+      "The world is your home — let's make you feel at home in yourself."
+      <span>Maison Vie</span>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span class="scroll-text" data-i18n="scroll">Scroll</span>
+  </div>
+</section>
 
-  <!-- If you later add external links, remember: rel="noopener noreferrer" target="_blank" -->
-  <noscript>
-    Your experience may be limited because JavaScript is disabled.
-  </noscript>
+<!-- Marquee -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <span class="marquee-item">Expat Coaching</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Relationship Coaching</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Executive Presence</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Cultural Transitions</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Identity & Purpose</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">London & Worldwide</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">English · Russian · Italian</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Expat Coaching</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Relationship Coaching</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Executive Presence</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Cultural Transitions</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Identity & Purpose</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">London & Worldwide</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">English · Russian · Italian</span>
+    <span class="marquee-dot">◆</span>
+  </div>
+</div>
+
+<!-- Philosophy -->
+<section class="philosophy" id="philosophy">
+  <div class="philosophy-left reveal">
+    <div class="philosophy-image-frame">
+      <img src="coach-photo.jpg" alt="Philosophy" onerror="this.style.background='linear-gradient(135deg,#e8e0d4 0%,#d4c8b8 100%)'">
+    </div>
+  </div>
+  <div class="philosophy-right reveal" style="transition-delay:0.2s">
+    <p class="section-label" data-i18n="about_label">Philosophy</p>
+    <h2 class="section-title" data-i18n-html="about_title">Where cultures <em>converge,</em><br>you flourish.</h2>
+    <p class="philosophy-body" data-i18n="about_body1">Living between worlds is a gift — and a challenge. Whether you've moved continents for love, career, or adventure, the internal landscape of identity, belonging and purpose shifts beneath your feet. Most coaches don't understand that. I do.</p>
+    <p class="philosophy-body" data-i18n="about_body2">Maison Vie offers a rare, culturally attuned coaching experience for those who refuse to settle for ordinary — in their lives, or in their coaching.</p>
+    <div class="philosophy-stats">
+      <div>
+        <div class="stat-number">12+</div>
+        <div class="stat-label" data-i18n="stat1">Years of Experience</div>
+      </div>
+      <div>
+        <div class="stat-number">30+</div>
+        <div class="stat-label" data-i18n="stat2">Countries Represented</div>
+      </div>
+      <div>
+        <div class="stat-number">3</div>
+        <div class="stat-label" data-i18n="stat3">Languages Spoken</div>
+      </div>
+      <div>
+        <div class="stat-number">98%</div>
+        <div class="stat-label" data-i18n="stat4">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <p class="section-label" data-i18n="services_label">Specialisms</p>
+  <h2 class="section-title" data-i18n-html="services_title">Tailored to your<br><em>world.</em></h2>
+  <p class="services-intro" data-i18n="services_intro">Every coaching engagement is bespoke, confidential, and designed for people who expect the exceptional.</p>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-number">01</div>
+      <h3 class="service-name" data-i18n="s1_name">Expat & Global Life</h3>
+      <p class="service-desc" data-i18n="s1_desc">Navigating relocation, cultural integration, identity shifts and the complex emotional landscape of life abroad. For those building a home in a new world.</p>
+      <a href="#contact" class="service-link" data-i18n="s_link">Enquire</a>
+    </div>
+    <div class="service-card reveal" style="transition-delay:0.15s">
+      <div class="service-number">02</div>
+      <h3 class="service-name" data-i18n="s2_name">Relationships & Love</h3>
+      <p class="service-desc" data-i18n="s2_desc">Intercultural relationships, dating as an expat, rebuilding after separation, deepening intimacy. For those who want love that transcends borders.</p>
+      <a href="#contact" class="service-link" data-i18n="s_link">Enquire</a>
+    </div>
+    <div class="service-card reveal" style="transition-delay:0.3s">
+      <div class="service-number">03</div>
+      <h3 class="service-name" data-i18n="s3_name">Executive & Career</h3>
+      <p class="service-desc" data-i18n="s3_desc">Leadership presence, career pivots, navigating corporate culture across borders, entrepreneurial clarity. For those who lead, globally.</p>
+      <a href="#contact" class="service-link" data-i18n="s_link">Enquire</a>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="process" id="process">
+  <p class="section-label" data-i18n="process_label">The Journey</p>
+  <h2 class="section-title" data-i18n-html="process_title">How we work<br><em>together.</em></h2>
+  <div class="process-grid">
+    <div class="process-step reveal">
+      <div class="process-num">Step 01</div>
+      <h3 class="process-title" data-i18n="p1_title">Discovery Call</h3>
+      <p class="process-desc" data-i18n="p1_desc">A complimentary 30-minute conversation to understand where you are, where you want to be, and whether we're the right fit.</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.1s">
+      <div class="process-num">Step 02</div>
+      <h3 class="process-title" data-i18n="p2_title">Deep Mapping</h3>
+      <p class="process-desc" data-i18n="p2_desc">An intensive 90-minute session to map your values, patterns, blocks and vision. The foundation for everything that follows.</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.2s">
+      <div class="process-num">Step 03</div>
+      <h3 class="process-title" data-i18n="p3_title">Bespoke Programme</h3>
+      <p class="process-desc" data-i18n="p3_desc">A fully tailored coaching journey — sessions, tools, and practices designed specifically for you and your goals.</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.3s">
+      <div class="process-num">Step 04</div>
+      <h3 class="process-title" data-i18n="p4_title">Lasting Transformation</h3>
+      <p class="process-desc" data-i18n="p4_desc">Measurable shifts in clarity, confidence, and direction. Not just insights, but a life that genuinely reflects who you are.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-header">
+    <div>
+      <p class="section-label" data-i18n="testi_label">Voices</p>
+      <h2 class="section-title" data-i18n-html="testi_title">Client <em>stories.</em></h2>
+    </div>
+    <div class="testimonials-nav">
+      <button class="testi-btn">←</button>
+      <button class="testi-btn">→</button>
+    </div>
+  </div>
+  <div class="testimonials-track">
+    <div class="testimonial-item reveal">
+      <div class="testi-stars"><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div></div>
+      <p class="testi-quote" data-i18n="t1_quote">"Working with Maison Vie changed the entire way I understood my move to London. I stopped grieving my old life and started building one I actually chose."</p>
+      <div class="testi-name">Natasha V.</div>
+      <div class="testi-role" data-i18n="t1_role">Finance Director · Relocated from Moscow</div>
+    </div>
+    <div class="testimonial-item reveal" style="transition-delay:0.15s">
+      <div class="testi-stars"><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div></div>
+      <p class="testi-quote" data-i18n="t2_quote">"The relationship coaching was extraordinary. Sensitive, intelligent, and transformative. I recommend Maison Vie to every expat I know going through a difficult time."</p>
+      <div class="testi-name">Marco & Elena R.</div>
+      <div class="testi-role" data-i18n="t2_role">Entrepreneurs · Milan & London</div>
+    </div>
+    <div class="testimonial-item reveal" style="transition-delay:0.3s">
+      <div class="testi-stars"><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div><div class="testi-star"></div></div>
+      <p class="testi-quote" data-i18n="t3_quote">"In three months I went from paralysed by indecision to launching my own consultancy. The clarity I gained is invaluable."</p>
+      <div class="testi-name">Oksana P.</div>
+      <div class="testi-role" data-i18n="t3_role">Management Consultant · Kyiv · London</div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing" id="pricing">
+  <p class="section-label" data-i18n="pricing_label">Investment</p>
+  <h2 class="section-title" data-i18n-html="pricing_title">Your transformation,<br><em>priced fairly.</em></h2>
+  <div class="pricing-grid">
+    <div class="pricing-card reveal">
+      <div class="pricing-tier" data-i18n="p_tier1">Clarity</div>
+      <div class="pricing-price"><span class="pricing-currency">£</span>350</div>
+      <span class="pricing-period" data-i18n="p_per_session">per session</span>
+      <ul class="pricing-features">
+        <li data-i18n="pf1">Single 60-minute session</li>
+        <li data-i18n="pf2">Immediate action plan</li>
+        <li data-i18n="pf3">Follow-up resources</li>
+        <li data-i18n="pf4">Email support 48hrs</li>
+      </ul>
+      <a href="#contact" class="btn-primary" style="display:inline-block;font-size:0.6rem" data-i18n="pricing_cta">Book Now</a>
+    </div>
+    <div class="pricing-card featured reveal" style="transition-delay:0.15s">
+      <div class="pricing-badge" data-i18n="most_popular">Most Sought After</div>
+      <div class="pricing-tier" style="color:var(--gold)" data-i18n="p_tier2">Transformation</div>
+      <div class="pricing-price" style="color:var(--cream)"><span class="pricing-currency">£</span>2,400</div>
+      <span class="pricing-period" data-i18n="p_6sessions">6-session programme</span>
+      <ul class="pricing-features">
+        <li data-i18n="pf5">6 × 60-minute sessions</li>
+        <li data-i18n="pf6">Deep Values & Vision Map</li>
+        <li data-i18n="pf7">WhatsApp support between sessions</li>
+        <li data-i18n="pf8">Bespoke tools & practices</li>
+        <li data-i18n="pf9">Progress tracking</li>
+      </ul>
+      <a href="#contact" class="btn-primary" style="display:inline-block;font-size:0.6rem;background:var(--gold);border-color:var(--gold)" data-i18n="pricing_cta">Book Now</a>
+    </div>
+    <div class="pricing-card reveal" style="transition-delay:0.3s">
+      <div class="pricing-tier" data-i18n="p_tier3">Mastery</div>
+      <div class="pricing-price"><span class="pricing-currency">£</span>5,500</div>
+      <span class="pricing-period" data-i18n="p_vip">VIP 3-Month Programme</span>
+      <ul class="pricing-features">
+        <li data-i18n="pf10">12 × 60-minute sessions</li>
+        <li data-i18n="pf11">Unlimited messaging support</li>
+        <li data-i18n="pf12">Emergency sessions included</li>
+        <li data-i18n="pf13">Lifestyle & identity audit</li>
+        <li data-i18n="pf14">Priority scheduling</li>
+      </ul>
+      <a href="#contact" class="btn-primary" style="display:inline-block;font-size:0.6rem" data-i18n="pricing_cta">Apply</a>
+    </div>
+  </div>
+</section>
+
+<!-- Instagram -->
+<div class="social-section">
+  <p class="section-label" data-i18n="ig_label">Community</p>
+  <h2 class="section-title" style="color:var(--cream);margin-bottom:16px" data-i18n-html="ig_title">Follow the <em>journey.</em></h2>
+  <p style="color:rgba(247,243,238,0.5);font-size:0.85rem;max-width:480px;margin:0 auto 60px;font-weight:300" data-i18n="ig_desc">Life, luxury and transformation — daily inspiration on Instagram.</p>
+  <div class="instagram-grid">
+    <div class="insta-placeholder">✦</div>
+    <div class="insta-placeholder">✦</div>
+    <div class="insta-placeholder">✦</div>
+    <div class="insta-placeholder">✦</div>
+    <div class="insta-placeholder">✦</div>
+    <div class="insta-placeholder">✦</div>
+  </div>
+  <a href="https://www.instagram.com/guccioandchanello/" target="_blank" rel="noopener" class="social-handle">@guccioandchanello</a>
+</div>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="contact-left">
+    <p class="section-label" data-i18n="contact_label">Connect</p>
+    <h2 class="section-title reveal" data-i18n-html="contact_title">Begin your<br><em>transformation.</em></h2>
+    <p class="contact-subtitle reveal" data-i18n="contact_subtitle">Every transformation begins with a single conversation. Share a little about yourself and I'll be in touch within 24 hours.</p>
+    <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label class="form-label" data-i18n="form_name">Your Name</label>
+        <input class="form-input" type="text" name="name" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="form_email">Email Address</label>
+        <input class="form-input" type="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="form_service">I'm interested in</label>
+        <select class="form-select" name="service">
+          <option data-i18n="opt_expat">Expat & Global Life Coaching</option>
+          <option data-i18n="opt_relationship">Relationship Coaching</option>
+          <option data-i18n="opt_executive">Executive & Career Coaching</option>
+          <option data-i18n="opt_unsure">I'm not sure yet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="form_message">Your Message</label>
+        <textarea class="form-textarea" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:fit-content;border:none;cursor:none" data-i18n="form_submit">Send Enquiry</button>
+    </form>
+  </div>
+  <div class="contact-right">
+    <p class="section-label" style="color:var(--gold)" data-i18n="info_label">Information</p>
+    <h2 class="section-title reveal" style="color:var(--cream)" data-i18n-html="info_title">Available<br><em>worldwide.</em></h2>
+    <div class="contact-info reveal">
+      <div class="contact-info-item">
+        <span class="info-label" data-i18n="info_location_l">Location</span>
+        <span class="info-value" data-i18n="info_location_v">London, UK · Online worldwide</span>
+      </div>
+      <div class="contact-info-item">
+        <span class="info-label" data-i18n="info_lang_l">Languages</span>
+        <span class="info-value" data-i18n="info_lang_v">English · Russian · Italian</span>
+      </div>
+      <div class="contact-info-item">
+        <span class="info-label" data-i18n="info_sessions_l">Sessions</span>
+        <span class="info-value" data-i18n="info_sessions_v">Video · In-person (London) · Phone</span>
+      </div>
+      <div class="contact-info-item">
+        <span class="info-label" data-i18n="info_response_l">Response Time</span>
+        <span class="info-value" data-i18n="info_response_v">Within 24 hours</span>
+      </div>
+      <div class="contact-info-item">
+        <span class="info-label">Instagram</span>
+        <span class="info-value" style="color:var(--gold-light)">@guccioandchanello</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">Maison <span>Vie</span></div>
+  <ul class="footer-links">
+    <li><a href="#philosophy" data-i18n="nav_about">About</a></li>
+    <li><a href="#services" data-i18n="nav_services">Services</a></li>
+    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    <li><a href="#" data-i18n="footer_privacy">Privacy</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 Maison Vie Ltd · London</p>
+</footer>
+
+<script>
+// ── CURSOR ──
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+function animateCursor() {
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+  cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+  ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+document.querySelectorAll('a, button, .service-card, .pricing-card, .testimonial-item').forEach(el => {
+  el.addEventListener('mouseenter', () => { cursor.style.width = '16px'; cursor.style.height = '16px'; cursor.style.background = 'var(--gold-light)'; });
+  el.addEventListener('mouseleave', () => { cursor.style.width = '8px'; cursor.style.height = '8px'; cursor.style.background = 'var(--gold)'; });
+});
+
+// ── NAV SCROLL ──
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ── REVEAL ON SCROLL ──
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.15 });
+revealEls.forEach(el => observer.observe(el));
+
+// ── FORM ──
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('[type="submit"]');
+  const orig = btn.textContent;
+  btn.textContent = '✓ Sent!';
+  btn.style.background = 'var(--gold)';
+  btn.style.borderColor = 'var(--gold)';
+  setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.borderColor = ''; e.target.reset(); }, 3000);
+}
+
+// ── I18N ──
+const translations = {
+  en: {
+    nav_about: 'About', nav_services: 'Services', nav_process: 'Process',
+    nav_testimonials: 'Testimonials', nav_contact: 'Contact',
+    hero_eyebrow: 'Premium Life Coaching · London & Worldwide',
+    hero_title: 'Your life,<br><em>curated.</em>',
+    hero_text: 'Exclusive coaching for high-achieving expats and global minds navigating identity, ambition and belonging — with grace.',
+    hero_cta_primary: 'Begin Your Journey',
+    hero_cta_ghost: 'Explore Services',
+    hero_quote: '"The world is your home — let\'s make you feel at home in yourself."<span>Maison Vie</span>',
+    scroll: 'Scroll',
+    about_label: 'Philosophy',
+    about_title: 'Where cultures <em>converge,</em><br>you flourish.',
+    about_body1: 'Living between worlds is a gift — and a challenge. Whether you\'ve moved continents for love, career, or adventure, the internal landscape of identity, belonging and purpose shifts beneath your feet.',
+    about_body2: 'Maison Vie offers a rare, culturally attuned coaching experience for those who refuse to settle for ordinary — in their lives, or in their coaching.',
+    stat1: 'Years of Experience', stat2: 'Countries Represented', stat3: 'Languages Spoken', stat4: 'Client Satisfaction',
+    services_label: 'Specialisms',
+    services_title: 'Tailored to your<br><em>world.</em>',
+    services_intro: 'Every coaching engagement is bespoke, confidential, and designed for people who expect the exceptional.',
+    s1_name: 'Expat & Global Life', s1_desc: 'Navigating relocation, cultural integration, identity shifts and the complex emotional landscape of life abroad. For those building a home in a new world.',
+    s2_name: 'Relationships & Love', s2_desc: 'Intercultural relationships, dating as an expat, rebuilding after separation, deepening intimacy. For those who want love that transcends borders.',
+    s3_name: 'Executive & Career', s3_desc: 'Leadership presence, career pivots, navigating corporate culture across borders, entrepreneurial clarity. For those who lead, globally.',
+    s_link: 'Enquire',
+    process_label: 'The Journey',
+    process_title: 'How we work<br><em>together.</em>',
+    p1_title: 'Discovery Call', p1_desc: 'A complimentary 30-minute conversation to understand where you are, where you want to be, and whether we\'re the right fit.',
+    p2_title: 'Deep Mapping', p2_desc: 'An intensive 90-minute session to map your values, patterns, blocks and vision. The foundation for everything.',
+    p3_title: 'Bespoke Programme', p3_desc: 'A fully tailored coaching journey — sessions, tools, and practices designed specifically for you.',
+    p4_title: 'Lasting Transformation', p4_desc: 'Measurable shifts in clarity, confidence, and direction. Not just insights, but a life that reflects who you truly are.',
+    testi_label: 'Voices', testi_title: 'Client <em>stories.</em>',
+    t1_quote: '"Working with Maison Vie changed the entire way I understood my move to London. I stopped grieving my old life and started building one I actually chose."',
+    t1_role: 'Finance Director · Relocated from Moscow',
+    t2_quote: '"The relationship coaching was extraordinary. Sensitive, intelligent, and transformative. I recommend Maison Vie to every expat I know."',
+    t2_role: 'Entrepreneurs · Milan & London',
+    t3_quote: '"In three months I went from paralysed by indecision to launching my own consultancy. The clarity I gained is invaluable."',
+    t3_role: 'Management Consultant · Kyiv · London',
+    pricing_label: 'Investment', pricing_title: 'Your transformation,<br><em>priced fairly.</em>',
+    p_tier1: 'Clarity', p_tier2: 'Transformation', p_tier3: 'Mastery',
+    p_per_session: 'per session', p_6sessions: '6-session programme', p_vip: 'VIP 3-Month Programme',
+    pf1: 'Single 60-minute session', pf2: 'Immediate action plan', pf3: 'Follow-up resources', pf4: 'Email support 48hrs',
+    pf5: '6 × 60-minute sessions', pf6: 'Deep Values & Vision Map', pf7: 'WhatsApp support', pf8: 'Bespoke tools & practices', pf9: 'Progress tracking',
+    pf10: '12 × 60-minute sessions', pf11: 'Unlimited messaging', pf12: 'Emergency sessions', pf13: 'Lifestyle & identity audit', pf14: 'Priority scheduling',
+    most_popular: 'Most Sought After', pricing_cta: 'Book Now',
+    ig_label: 'Community', ig_title: 'Follow the <em>journey.</em>',
+    ig_desc: 'Life, luxury and transformation — daily inspiration on Instagram.',
+    contact_label: 'Connect', contact_title: 'Begin your<br><em>transformation.</em>',
+    contact_subtitle: 'Every transformation begins with a single conversation. Share a little about yourself and I\'ll be in touch within 24 hours.',
+    form_name: 'Your Name', form_email: 'Email Address', form_service: 'I\'m interested in',
+    opt_expat: 'Expat & Global Life Coaching', opt_relationship: 'Relationship Coaching', opt_executive: 'Executive & Career Coaching', opt_unsure: 'I\'m not sure yet',
+    form_message: 'Your Message', form_submit: 'Send Enquiry',
+    info_label: 'Information', info_title: 'Available<br><em>worldwide.</em>',
+    info_location_l: 'Location', info_location_v: 'London, UK · Online worldwide',
+    info_lang_l: 'Languages', info_lang_v: 'English · Russian · Italian',
+    info_sessions_l: 'Sessions', info_sessions_v: 'Video · In-person (London) · Phone',
+    info_response_l: 'Response Time', info_response_v: 'Within 24 hours',
+    footer_privacy: 'Privacy'
+  },
+  ru: {
+    nav_about: 'О нас', nav_services: 'Услуги', nav_process: 'Процесс',
+    nav_testimonials: 'Отзывы', nav_contact: 'Контакт',
+    hero_eyebrow: 'Премиум Лайф-Коучинг · Лондон и весь мир',
+    hero_title: 'Ваша жизнь,<br><em>выбранная вами.</em>',
+    hero_text: 'Эксклюзивный коучинг для успешных экспатов и людей с глобальным мышлением — в поиске себя, смысла и принадлежности.',
+    hero_cta_primary: 'Начать путь',
+    hero_cta_ghost: 'Услуги',
+    hero_quote: '"Мир — ваш дом. Давайте сделаем так, чтобы вы чувствовали себя дома в самом себе."<span>Maison Vie</span>',
+    scroll: 'Листать',
+    about_label: 'Философия',
+    about_title: 'Там, где культуры <em>встречаются,</em><br>вы расцветаете.',
+    about_body1: 'Жизнь между мирами — это и дар, и вызов. Смена страны меняет не только адрес, но и ощущение себя, принадлежности и смысла.',
+    about_body2: 'Maison Vie предлагает редкий, культурально-чуткий коучинг для тех, кто не готов довольствоваться обычным.',
+    stat1: 'Лет опыта', stat2: 'Стран представлено', stat3: 'Языка общения', stat4: 'Довольных клиентов',
+    services_label: 'Специализации',
+    services_title: 'Создано для<br><em>вашего мира.</em>',
+    services_intro: 'Каждый коучинг — уникален, конфиденциален и создан для тех, кто ждёт исключительного.',
+    s1_name: 'Экспат и глобальная жизнь', s1_desc: 'Переезд, культурная интеграция, смена идентичности и сложный эмоциональный ландшафт жизни за рубежом.',
+    s2_name: 'Отношения и любовь', s2_desc: 'Межкультурные отношения, знакомства в эмиграции, восстановление после разрыва, углубление близости.',
+    s3_name: 'Карьера и лидерство', s3_desc: 'Присутствие лидера, карьерные переходы, корпоративная культура за рубежом, предпринимательская ясность.',
+    s_link: 'Запросить',
+    process_label: 'Путь',
+    process_title: 'Как мы работаем<br><em>вместе.</em>',
+    p1_title: 'Знакомство', p1_desc: 'Бесплатная 30-минутная беседа: где вы сейчас, куда хотите, и подходим ли мы друг другу.',
+    p2_title: 'Глубинное картирование', p2_desc: '90-минутная сессия по ценностям, паттернам, блокам и видению — фундамент всего, что последует.',
+    p3_title: 'Индивидуальная программа', p3_desc: 'Полностью персонализированный коучинг — сессии, инструменты и практики, созданные именно для вас.',
+    p4_title: 'Устойчивая трансформация', p4_desc: 'Измеримые изменения в ясности, уверенности и направлении. Не просто озарения — жизнь, которая вам подходит.',
+    testi_label: 'Голоса', testi_title: 'Истории <em>клиентов.</em>',
+    t1_quote: '«Работа с Maison Vie изменила моё понимание переезда в Лондон. Я перестала оплакивать прошлое и начала строить жизнь, которую сама выбрала.»',
+    t1_role: 'Финансовый директор · Переезд из Москвы',
+    t2_quote: '«Коучинг по отношениям был исключительным. Чутким, умным и трансформирующим. Рекомендую всем экспатам.»',
+    t2_role: 'Предприниматели · Милан и Лондон',
+    t3_quote: '«За три месяца я перешла от паралича нерешительности к запуску собственного консалтинга. Ясность, которую я получила, бесценна.»',
+    t3_role: 'Консультант по управлению · Киев · Лондон',
+    pricing_label: 'Инвестиция', pricing_title: 'Ваша трансформация,<br><em>честная цена.</em>',
+    p_tier1: 'Ясность', p_tier2: 'Трансформация', p_tier3: 'Мастерство',
+    p_per_session: 'за сессию', p_6sessions: 'программа из 6 сессий', p_vip: 'VIP-программа на 3 месяца',
+    pf1: 'Одна 60-минутная сессия', pf2: 'Немедленный план действий', pf3: 'Материалы для работы', pf4: 'Email-поддержка 48ч',
+    pf5: '6 × 60-минутных сессий', pf6: 'Карта ценностей и видения', pf7: 'Поддержка в WhatsApp', pf8: 'Инструменты и практики', pf9: 'Отслеживание прогресса',
+    pf10: '12 × 60-минутных сессий', pf11: 'Неограниченная переписка', pf12: 'Экстренные сессии', pf13: 'Аудит стиля жизни', pf14: 'Приоритетное расписание',
+    most_popular: 'Наиболее популярно', pricing_cta: 'Записаться',
+    ig_label: 'Сообщество', ig_title: 'Следите за <em>путём.</em>',
+    ig_desc: 'Жизнь, роскошь и трансформация — ежедневное вдохновение в Instagram.',
+    contact_label: 'Связаться', contact_title: 'Начните вашу<br><em>трансформацию.</em>',
+    contact_subtitle: 'Любая трансформация начинается с одного разговора. Расскажите немного о себе — я отвечу в течение 24 часов.',
+    form_name: 'Ваше имя', form_email: 'Email',  form_service: 'Меня интересует',
+    opt_expat: 'Коучинг для экспатов', opt_relationship: 'Коучинг по отношениям', opt_executive: 'Карьера и лидерство', opt_unsure: 'Пока не знаю',
+    form_message: 'Ваше сообщение', form_submit: 'Отправить',
+    info_label: 'Информация', info_title: 'Доступно<br><em>по всему миру.</em>',
+    info_location_l: 'Локация', info_location_v: 'Лондон · Онлайн по всему миру',
+    info_lang_l: 'Языки', info_lang_v: 'Английский · Русский · Итальянский',
+    info_sessions_l: 'Форматы', info_sessions_v: 'Видео · Лично (Лондон) · Телефон',
+    info_response_l: 'Ответ', info_response_v: 'В течение 24 часов',
+    footer_privacy: 'Конфиденциальность'
+  },
+  it: {
+    nav_about: 'Chi siamo', nav_services: 'Servizi', nav_process: 'Percorso',
+    nav_testimonials: 'Testimonianze', nav_contact: 'Contatti',
+    hero_eyebrow: 'Life Coaching Premium · Londra e tutto il mondo',
+    hero_title: 'La tua vita,<br><em>scelta da te.</em>',
+    hero_text: 'Coaching esclusivo per expat di successo e menti globali che navigano identità, ambizione e appartenenza — con eleganza.',
+    hero_cta_primary: 'Inizia il tuo percorso',
+    hero_cta_ghost: 'Scopri i servizi',
+    hero_quote: '"Il mondo è casa tua — facciamo sì che tu ti senta a casa in te stesso."<span>Maison Vie</span>',
+    scroll: 'Scorri',
+    about_label: 'Filosofia',
+    about_title: 'Dove le culture <em>si incontrano,</em><br>tu fiorisci.',
+    about_body1: 'Vivere tra mondi diversi è un dono — e una sfida. Che tu ti sia spostato per amore, carriera o avventura, il paesaggio interiore di identità e appartenenza si trasforma.',
+    about_body2: 'Maison Vie offre un\'esperienza di coaching rara e culturalmente sensibile per chi si rifiuta di accontentarsi dell\'ordinario.',
+    stat1: 'Anni di esperienza', stat2: 'Paesi rappresentati', stat3: 'Lingue parlate', stat4: 'Soddisfazione clienti',
+    services_label: 'Specializzazioni',
+    services_title: 'Pensato per il<br><em>tuo mondo.</em>',
+    services_intro: 'Ogni percorso di coaching è su misura, riservato e pensato per chi si aspetta l\'eccezionale.',
+    s1_name: 'Expat e vita globale', s1_desc: 'Navigare il trasferimento, l\'integrazione culturale, i cambi di identità e il complesso paesaggio emotivo della vita all\'estero.',
+    s2_name: 'Relazioni e amore', s2_desc: 'Relazioni interculturali, dating da expat, rinascita dopo una separazione, approfondire l\'intimità. Per un amore senza confini.',
+    s3_name: 'Carriera e leadership', s3_desc: 'Presenza da leader, transizioni di carriera, cultura aziendale transfrontaliera, chiarezza imprenditoriale.',
+    s_link: 'Richiedi info',
+    process_label: 'Il Percorso',
+    process_title: 'Come lavoriamo<br><em>insieme.</em>',
+    p1_title: 'Chiamata conoscitiva', p1_desc: 'Una conversazione gratuita di 30 minuti per capire dove sei, dove vuoi arrivare e se siamo la giusta coppia.',
+    p2_title: 'Mappatura profonda', p2_desc: 'Una sessione intensiva di 90 minuti per mappare valori, schemi, blocchi e visione — la base di tutto.',
+    p3_title: 'Programma su misura', p3_desc: 'Un percorso di coaching completamente personalizzato — sessioni, strumenti e pratiche progettati per te.',
+    p4_title: 'Trasformazione duratura', p4_desc: 'Cambiamenti misurabili in chiarezza, fiducia e direzione. Non solo intuizioni — una vita che ti rispecchia.',
+    testi_label: 'Voci', testi_title: 'Storie dei <em>clienti.</em>',
+    t1_quote: '"Lavorare con Maison Vie ha cambiato completamente il mio modo di vivere il trasferimento a Londra. Ho smesso di rimpiangere il passato e ho iniziato a costruire la vita che voglio."',
+    t1_role: 'Direttrice Finanziaria · Trasferita da Mosca',
+    t2_quote: '"Il coaching sulle relazioni è stato straordinario. Sensibile, intelligente e trasformativo. Lo raccomando a ogni expat che conosco."',
+    t2_role: 'Imprenditori · Milano e Londra',
+    t3_quote: '"In tre mesi sono passata dall\'essere paralizzata dall\'indecisione al lanciare la mia consulenza. La chiarezza che ho ottenuto è inestimabile."',
+    t3_role: 'Consulente manageriale · Kiev · Londra',
+    pricing_label: 'Investimento', pricing_title: 'La tua trasformazione,<br><em>a un prezzo equo.</em>',
+    p_tier1: 'Chiarezza', p_tier2: 'Trasformazione', p_tier3: 'Eccellenza',
+    p_per_session: 'per sessione', p_6sessions: 'programma da 6 sessioni', p_vip: 'Programma VIP 3 mesi',
+    pf1: 'Una sessione da 60 minuti', pf2: 'Piano d\'azione immediato', pf3: 'Risorse di follow-up', pf4: 'Supporto email 48h',
+    pf5: '6 × sessioni da 60 min', pf6: 'Mappa valori e visione', pf7: 'Supporto WhatsApp', pf8: 'Strumenti e pratiche', pf9: 'Monitoraggio progressi',
+    pf10: '12 × sessioni da 60 min', pf11: 'Messaggi illimitati', pf12: 'Sessioni d\'emergenza', pf13: 'Audit stile di vita', pf14: 'Agenda prioritaria',
+    most_popular: 'Il più richiesto', pricing_cta: 'Prenota',
+    ig_label: 'Community', ig_title: 'Segui il <em>percorso.</em>',
+    ig_desc: 'Vita, lusso e trasformazione — ispirazione quotidiana su Instagram.',
+    contact_label: 'Contattaci', contact_title: 'Inizia la tua<br><em>trasformazione.</em>',
+    contact_subtitle: 'Ogni trasformazione inizia con una conversazione. Parlami un po\' di te — ti risponderò entro 24 ore.',
+    form_name: 'Il tuo nome', form_email: 'Indirizzo email', form_service: 'Sono interessato/a a',
+    opt_expat: 'Coaching per expat', opt_relationship: 'Coaching sulle relazioni', opt_executive: 'Carriera e leadership', opt_unsure: 'Non sono ancora sicuro/a',
+    form_message: 'Il tuo messaggio', form_submit: 'Invia richiesta',
+    info_label: 'Informazioni', info_title: 'Disponibile<br><em>ovunque.</em>',
+    info_location_l: 'Sede', info_location_v: 'Londra · Online in tutto il mondo',
+    info_lang_l: 'Lingue', info_lang_v: 'Inglese · Russo · Italiano',
+    info_sessions_l: 'Modalità', info_sessions_v: 'Video · Di persona (Londra) · Telefono',
+    info_response_l: 'Risposta', info_response_v: 'Entro 24 ore',
+    footer_privacy: 'Privacy'
+  }
+};
+
+let currentLang = 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent.trim().toLowerCase() === lang);
+  });
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key]) el.textContent = t[key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if (t[key]) el.innerHTML = t[key];
+  });
+}
+
+// Init
+setLang('en');
+</script>
 </body>
 </html>
-
-
-
-

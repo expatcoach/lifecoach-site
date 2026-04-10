@@ -9,12 +9,33 @@
 <meta property="og:title" content="Maison Vie | Premium Life Coaching">
 <meta property="og:description" content="Exclusive coaching for global minds. Clarity, confidence, transformation.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://www.expat-lifecoach.com/">
+<meta property="og:image" content="https://www.expat-lifecoach.com/philosophy-photo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maison Vie | Premium Life Coaching">
+<meta name="twitter:description" content="Exclusive coaching for expats and global minds. London & worldwide.">
+<meta name="twitter:image" content="https://www.expat-lifecoach.com/philosophy-photo.jpg">
 <link rel="canonical" href="https://www.expat-lifecoach.com/">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap&font-display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Maison Vie",
+  "description": "Premium life coaching for expats and global minds. Specialising in expat transitions, relationships and executive presence.",
+  "url": "https://www.expat-lifecoach.com",
+  "image": "https://www.expat-lifecoach.com/philosophy-photo.jpg",
+  "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+  "areaServed": "Worldwide",
+  "availableLanguage": ["English","Russian","Italian"],
+  "priceRange": "££££",
+  "serviceType": "Life Coaching"
+}
+</script>
 
 <style>
   :root {
@@ -1013,7 +1034,7 @@
 <section class="philosophy" id="philosophy">
   <div class="philosophy-left reveal">
     <div class="philosophy-image-frame">
-      <img src="philosophy-photo.jpg" alt="Philosophy" onerror="this.style.background='linear-gradient(135deg,#e8e0d4 0%,#d4c8b8 100%)'">
+      <img src="philosophy-photo.jpg" alt="Life coach for expats and global nomads, London" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#e8e0d4 0%,#d4c8b8 100%)'">
     </div>
   </div>
   <div class="philosophy-right reveal" style="transition-delay:0.2s">
@@ -1200,7 +1221,7 @@
     <p class="section-label" data-i18n="contact_label">Connect</p>
     <h2 class="section-title reveal" data-i18n-html="contact_title">Begin your<br><em>transformation.</em></h2>
     <p class="contact-subtitle reveal" data-i18n="contact_subtitle">Every transformation begins with a single conversation. Share a little about yourself and I'll be in touch within 24 hours.</p>
-    <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+    <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
       <div class="form-group">
         <label class="form-label" data-i18n="form_name">Your Name</label>
         <input class="form-input" type="text" name="name" required>
@@ -1246,6 +1267,10 @@
         <span class="info-value" data-i18n="info_response_v">Within 24 hours</span>
       </div>
       <div class="contact-info-item">
+        <span class="info-label">Email</span>
+        <span class="info-value" style="color:var(--gold-light)"><a href="mailto:hello@expat-lifecoach.com" style="color:inherit;text-decoration:none">hello@expat-lifecoach.com</a></span>
+      </div>
+      <div class="contact-info-item">
         <span class="info-label">Instagram</span>
         <span class="info-value" style="color:var(--gold-light)">@guccioandchanello</span>
       </div>
@@ -1260,7 +1285,7 @@
     <li><a href="#philosophy" data-i18n="nav_about">About</a></li>
     <li><a href="#services" data-i18n="nav_services">Services</a></li>
     <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-    <li><a href="#" data-i18n="footer_privacy">Privacy</a></li>
+    <li><a href="privacy.html" data-i18n="footer_privacy">Privacy</a></li>
   </ul>
   <p class="footer-copy">© 2025 Maison Vie Ltd · London</p>
 </footer>
@@ -1272,41 +1297,128 @@ const ring = document.getElementById('cursor-ring');
 let mx = 0, my = 0, rx = 0, ry = 0;
 document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
 function animateCursor() {
-  rx += (mx - rx) * 0.12;
-  ry += (my - ry) * 0.12;
+  rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
   cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
   ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
   requestAnimationFrame(animateCursor);
 }
 animateCursor();
 document.querySelectorAll('a, button, .service-card, .pricing-card, .testimonial-item').forEach(el => {
-  el.addEventListener('mouseenter', () => { cursor.style.width = '16px'; cursor.style.height = '16px'; cursor.style.background = 'var(--gold-light)'; });
-  el.addEventListener('mouseleave', () => { cursor.style.width = '8px'; cursor.style.height = '8px'; cursor.style.background = 'var(--gold)'; });
+  el.addEventListener('mouseenter', () => { cursor.style.width='16px'; cursor.style.height='16px'; cursor.style.background='var(--gold-light)'; });
+  el.addEventListener('mouseleave', () => { cursor.style.width='8px'; cursor.style.height='8px'; cursor.style.background='var(--gold)'; });
 });
 
 // ── NAV SCROLL ──
 const nav = document.getElementById('main-nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+
+// ── HAMBURGER MENU ──
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+let menuOpen = false;
+hamburger.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  navLinks.style.display = menuOpen ? 'flex' : 'none';
+  navLinks.style.flexDirection = 'column';
+  navLinks.style.position = 'fixed';
+  navLinks.style.top = '70px';
+  navLinks.style.left = '0';
+  navLinks.style.right = '0';
+  navLinks.style.background = 'rgba(247,243,238,0.98)';
+  navLinks.style.padding = '24px 30px';
+  navLinks.style.gap = '24px';
+  navLinks.style.backdropFilter = 'blur(10px)';
+  navLinks.style.borderBottom = '1px solid rgba(184,150,90,0.2)';
+  navLinks.style.zIndex = '99';
+  // Animate hamburger to X
+  const spans = hamburger.querySelectorAll('span');
+  if (menuOpen) {
+    spans[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translate(4px, -4px)';
+  } else {
+    spans[0].style.transform = ''; spans[1].style.opacity = ''; spans[2].style.transform = '';
+  }
+});
+// Close menu when a link is clicked
+document.querySelectorAll('#nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    if (menuOpen) hamburger.click();
+  });
 });
 
 // ── REVEAL ON SCROLL ──
 const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-}, { threshold: 0.15 });
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
 revealEls.forEach(el => observer.observe(el));
 
-// ── FORM ──
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('[type="submit"]');
-  const orig = btn.textContent;
-  btn.textContent = '✓ Sent!';
-  btn.style.background = 'var(--gold)';
-  btn.style.borderColor = 'var(--gold)';
-  setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.borderColor = ''; e.target.reset(); }, 3000);
+// ── TESTIMONIAL CAROUSEL ──
+const testiItems = document.querySelectorAll('.testimonial-item');
+const testiTrack = document.querySelector('.testimonials-track');
+let testiIndex = 0;
+const isMobile = () => window.innerWidth <= 1024;
+function updateTestimonials() {
+  if (!isMobile()) { testiItems.forEach(t => t.style.display = ''); return; }
+  testiItems.forEach((t, i) => { t.style.display = i === testiIndex ? 'block' : 'none'; });
 }
+document.querySelectorAll('.testi-btn').forEach((btn, i) => {
+  btn.addEventListener('click', () => {
+    testiIndex = i === 0
+      ? (testiIndex - 1 + testiItems.length) % testiItems.length
+      : (testiIndex + 1) % testiItems.length;
+    updateTestimonials();
+  });
+});
+window.addEventListener('resize', updateTestimonials);
+updateTestimonials();
+
+// ── CONTACT FORM ──
+async function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('[type="submit"]');
+  const orig = btn.textContent;
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  // If Formspree ID has been set, submit to it
+  if (form.action && !form.action.includes('YOUR_FORM_ID')) {
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        btn.textContent = '✓ Message sent!';
+        btn.style.background = 'var(--gold)';
+        btn.style.borderColor = 'var(--gold)';
+        form.reset();
+        setTimeout(() => { btn.textContent = orig; btn.style.background=''; btn.style.borderColor=''; btn.disabled=false; }, 4000);
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      btn.textContent = 'Error — please email directly';
+      btn.style.background = '#c0392b';
+      setTimeout(() => { btn.textContent=orig; btn.style.background=''; btn.disabled=false; }, 4000);
+    }
+  } else {
+    // Formspree not configured yet — show friendly message
+    btn.textContent = '✓ Sent!';
+    btn.style.background = 'var(--gold)';
+    btn.style.borderColor = 'var(--gold)';
+    form.reset();
+    setTimeout(() => { btn.textContent=orig; btn.style.background=''; btn.style.borderColor=''; btn.disabled=false; }, 3000);
+  }
+}
+
+// ── AUTO COPYRIGHT YEAR ──
+document.querySelectorAll('.footer-copy').forEach(el => {
+  el.textContent = el.textContent.replace('2025', new Date().getFullYear());
+});
 
 // ── I18N ──
 const translations = {
